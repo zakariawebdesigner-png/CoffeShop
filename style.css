@@ -1432,11 +1432,28 @@ border-radius: 3rem;
 }
 
 
+.DisappearForm{
+  display: flex;
+  justify-content: flex-end;
+  font-size: xx-large;
+  height: fit-content;
+line-height: 0; 
+padding-right: 0.5rem;
+cursor: pointer;
+user-select: none;
+   color: #fff;
+   font-weight: 600;
+       font-family: 'Poppins',sans-serif;
+
+
+}
+
 .form-text{
-   
+   color: #ede136b5;
     align-self: center;
     font-size: xx-large;
-    font-family: 'Poppins';
+    font-family: 'Poppins',sans-serif;
+
     font-weight: 500;
 }
 
@@ -1449,13 +1466,17 @@ position: fixed;
 z-index: 1000000000000;
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 13px;
 justify-content: center;
 height: max-content;
 width: clamp(14rem,37vw,18rem) ;
 padding-bottom: 1rem;
-padding-top: 1rem;
-background: linear-gradient(45deg,#634418,#633f0c,#633f0c,#633f0c,#634418,#c0bab2,#634418);
+padding-top: 0.3rem;
+
+background: rgba(97, 61, 29, 0.829);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+
 margin-top: clamp(4rem,55vw,10rem);
 align-self: center;
 border: 0.05px solid transparent ;
@@ -1472,7 +1493,11 @@ form.active {
   pointer-events: auto; /* now you can click */
 }
 
-
+form.Disappear{
+   opacity: 0;
+  transform: translateX(-100vw);
+  pointer-events: none; /* now you can click */
+}
 
 
 
@@ -1504,7 +1529,16 @@ form button{
     font-size: xx-large;
     text-align: center;
   font-family: 'Playfair Display', sans-serif;
-background: linear-gradient(43deg,#422b0a,#422b0a,#fff,#fff);
+
+    background: linear-gradient(
+        135deg,
+        #9c4d0b,
+        #d66a0b,
+        #ff9d2e,
+        #d66a0b,
+        #9c4d0b
+    );
+
 color: #e7e7e7;
     cursor: pointer;
 }

@@ -1,8 +1,13 @@
 const button = document.getElementById("Vesitor");
+import{FormAppear} from './Landing/Ui/FormAppearence.js';
+import{registerBtn} from './Landing/indexJs-Elements.js';
+import{DisappearForm} from './Landing/indexJs-Elements.js';
+import { HideTheForm } from './Landing/Ui/Hide-Form.js';
+
 
 button.addEventListener("click", function () {
 
-    // Add animation class
+  
     document.body.classList.add("animate");
 button.classList.add("rotateVisiter");
 
@@ -12,12 +17,26 @@ button.classList.add("rotateVisiter");
     }, 2000); // 2 seconds (match your animation time)
 
 });
-const registerBtn = document.getElementById('registerBtn');
-const form = document.querySelector('form');
+
 
 registerBtn.addEventListener('click', () => {
-  form.classList.add('active');
+ 
+    FormAppear();
+
+
 });
+
+
+
+DisappearForm.addEventListener("click",()=>{
+
+
+HideTheForm();
+
+
+});
+
+
 
 
    
