@@ -1,8 +1,8 @@
 const button = document.getElementById("Vesitor");
-import{FormAppear} from './Landing/Ui/FormAppearence.js';
-import{registerBtn} from './Landing/indexJs-Elements.js';
-import{DisappearForm} from './Landing/indexJs-Elements.js';
-import { HideTheForm } from './Landing/Ui/Hide-Form.js';
+import{FormAppear} from './FormAppearence.js';
+import{registerBtn} from '../indexJs-Elements.js';
+import{DisappearForm} from '../indexJs-Elements.js';
+import { HideTheForm } from './Hide-Form.js';
 
 
 button.addEventListener("click", function () {

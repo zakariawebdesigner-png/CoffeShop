@@ -1,0 +1,30 @@
+Folder map of c:\Users\LENOVO\Desktop\Htmlcss\My-Projects\Coffe site\OrderBuilder
+==================================================
+
+├── Calculations/
+│   ├── README.md
+│   ├── SugarPriceAdded.js
+│   └── Total.js
+├── Data/
+│   ├── Coffee.js
+│   └── OrderRecord.js
+├── Landing/
+│   ├── Ui/
+│   │   ├── FormAppearence.js
+│   │   ├── Hide-Form.js
+│   │   └── index-Main.js
+│   └── indexJs-Elements.js
+├── Selections/
+│   ├── ChosenMilk.js
+│   ├── ChosenOrder.js
+│   ├── ChosenTempreter.js
+│   └── SizeChoosen.js
+├── Ui/
+│   ├── MilkTextConten.js
+│   ├── SugarInput.js
+│   └── TempTextContent.js
+├── Validation/
+│   ├── Checking-Temprater.js
+│   └── CheckingMilk.js
+├── CalcElements.js
+└── README.md
