@@ -4,7 +4,7 @@ export const minus=document.getElementById("minus");
 export const SugarInput=document.getElementById("shugar");
 export const ptotal=document.getElementById("ptotal");
 
- export const input2=document.getElementById("shugar2");
+ export const Quantity=document.getElementById("Quantity");
 
  export const summary=document.getElementById("summary");
  export const Temprator= document.querySelectorAll(".li-temp");

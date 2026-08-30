@@ -9,7 +9,8 @@
         id: Date.now(),
         Name: "",
         Price:0 ,
-
+        OrderPrice:0 ,
+        Quantity:1,
         option: {
 
             size:  { name:"" , Price:0  },

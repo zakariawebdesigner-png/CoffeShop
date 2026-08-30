@@ -3,10 +3,8 @@
 
 import { OrderObject } from "../Data/OrderRecord.js";
 
-
   function SizeChoosed(event){
 
-   
 
             if(event.target.closest("#small")){
 

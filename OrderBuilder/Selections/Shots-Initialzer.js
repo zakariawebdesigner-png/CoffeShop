@@ -5,7 +5,7 @@
 
      import { OrderObject } from "../Data/OrderRecord.js"; 
 
-    function SugarPrice(){
+    function SugarShots(){
 
          let SugarPriceReturned=0;
 
@@ -45,4 +45,4 @@
     }
 
 
-    export{SugarPrice};
+    export{SugarShots};

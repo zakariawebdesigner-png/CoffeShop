@@ -11,11 +11,13 @@ import { CheckExistMilk } from "../Validation/CheckingMilk.js";
                    window.alert("Unvalid Milk");
           
                 return;
+                
                }
                 OrderObject.option.Milk.name=OrderObject.CoffeeRecord.option.Milk[CheckMilkReturns.MilkIndex].name;
                   OrderObject.option.Milk.Price=OrderObject.CoffeeRecord.option.Milk[CheckMilkReturns.MilkIndex].Price;
-
+                           
                  
+
 
 
 

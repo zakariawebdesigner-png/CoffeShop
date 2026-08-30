@@ -6,13 +6,17 @@ import { SugarInput } from "../CalcElements.js";
 
 
     function SugarIncrease(){
+ 
+       
+      if(Number(SugarInput.value)==3){
+            
+         SugarInput.value==3;
 
-      if(Number(SugarInput.value)==3)return;
-
+      };
        SugarInput.value=Number(SugarInput.value)+1;
        
         
-
+            
     }
 
 

@@ -1,13 +1,19 @@
- import { DisplayPrice } from "../Ui/PriceText.js";
-   import { ptotal } from "../CalcElements.js";
 import { OrderObject } from "../Data/OrderRecord.js";
-   let CurrentPrice=0;
- function PriceCounter(Price){
 
-CurrentPrice=OrderObject.Price;
-    CurrentPrice+=Price;
-       DisplayPrice(ptotal,CurrentPrice);
+ function PriceCounter(SizePrice,TempPrice,MilkPrice){
 
+   OrderObject.OrderPrice=OrderObject.Price;
+
+   OrderObject.OrderPrice+=SizePrice;
+
+      OrderObject.OrderPrice+=TempPrice;
+
+            OrderObject.OrderPrice+=MilkPrice;
+
+            console.log("Inside f:"+OrderObject.OrderPrice);
+
+
+    
  }
 
 
