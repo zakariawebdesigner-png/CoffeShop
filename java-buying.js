@@ -19,7 +19,7 @@ import { Quantity } from "./OrderBuilder/CalcElements.js";
 import { MilkOrdered } from "./OrderBuilder/Selections/ChosenMilk.js";
 import { HandleClicks } from "./OrderBuilder/Validation/Cheking-Clicks.js";
 import { PriceCounter } from "./OrderBuilder/Calculations/PriceUpdate.js";
-
+import { Slide } from "./OrderBuilder/Ui/SlideToOrder.js";
 
       
 
@@ -175,9 +175,8 @@ minus2.addEventListener("click",()=>{
 });
 
 
-import { Slide } from "./OrderBuilder/Ui/SlideToOrder.js";
 
-console.log("java-buying.js loaded");
+
 Slide();
 
 

@@ -46,11 +46,16 @@
 
 
             SlideButton.addEventListener("pointermove", (event) => {
+              if(!Draging)return;
                  const roadRect = SlidingRoad.getBoundingClientRect();
          possition = event.clientX - roadRect.left - grabOffset;
-               SlideButton.style.left=`${possition}px`;
+               possition = Math.min(possition, 150);
+          possition = Math.min(possition, 145); // Don't allow it to go before 0px possition = Math.max(possition, 0);
+               if(possition==145){
+                    possition=145;
+               }
 
-
+          SlideButton.style.left=`${possition}px`;
         console.log("Moving");
 
         
@@ -87,6 +92,7 @@ const distance = Math.abs(buttonRect.left - targetRect.left);
 
           }
 
+        
           else{
             
                SlideButton.style.left = "0px";

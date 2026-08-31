@@ -3,7 +3,6 @@
  }
 
 
-
 body{
     display: flex;
     flex-direction: column;
@@ -99,7 +98,7 @@ padding-right: 0.3rem;
     text-decoration: none;
     color: rgb(11, 6, 6);
        
-         font-family:  'Inter', sans-serif;
+         font-family:'Poppins',sans-serif;
          font-weight: 500;
  }
  .About-us{
@@ -1236,6 +1235,7 @@ footer a i{
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
+        gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;
    padding-top: 0.4rem;
@@ -1598,6 +1598,7 @@ color: #d5973f;
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
+        gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;
    padding-top: 0.4rem;
@@ -1645,6 +1646,7 @@ right: clamp(1rem,27vw,1.5rem);
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
+        gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;
    padding-top: 0.4rem;
@@ -1760,6 +1762,7 @@ right: clamp(1rem,27vw,1.5rem);
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
+        gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;
    padding-top: 0.4rem;
@@ -1800,6 +1803,7 @@ right: clamp(1rem,27vw,1.5rem);
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
+        gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;
    padding-top: 0.4rem;

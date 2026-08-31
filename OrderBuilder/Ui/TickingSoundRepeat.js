@@ -27,10 +27,6 @@ function Ticking_SoundPlayer(){
     isTicking = true;
     playTick();                           // immediate tick on grab
   
-    
-   
-
-
 }
 
          function StopTickingSound(){
