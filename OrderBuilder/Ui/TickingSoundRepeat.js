@@ -18,11 +18,11 @@ Ticking.addEventListener("ended", () => {
 
 function Ticking_SoundPlayer(){
   if(OrderObject.option.size.name==""){
-         window.alert("Select options forst");
-      return;
+        window.alert("Select first");
+        
+         return;
      }
 
-       
 
     isTicking = true;
     playTick();                           // immediate tick on grab

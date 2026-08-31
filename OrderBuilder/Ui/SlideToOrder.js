@@ -26,10 +26,9 @@
 
      SlideButton.addEventListener("pointerdown",(event)=>{
        
-      console.log('entered');
       
         Draging=true;
-                  Ticking_SoundPlayer(Draging);
+                  Ticking_SoundPlayer();
               SlideButton.classList.remove("Slow");
 
         SlideButton.setPointerCapture(event.pointerId);
@@ -46,10 +45,14 @@
 
 
             SlideButton.addEventListener("pointermove", (event) => {
+              
               if(!Draging)return;
                  const roadRect = SlidingRoad.getBoundingClientRect();
-         possition = event.clientX - roadRect.left - grabOffset;
+
+                  possition = event.clientX - roadRect.left - grabOffset;
+
                possition = Math.min(possition, 150);
+
           possition = Math.min(possition, 145); // Don't allow it to go before 0px possition = Math.max(possition, 0);
                if(possition==145){
                     possition=145;
