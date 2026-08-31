@@ -21,14 +21,14 @@ import { HandleClicks } from "./OrderBuilder/Validation/Cheking-Clicks.js";
 import { PriceCounter } from "./OrderBuilder/Calculations/PriceUpdate.js";
 
 
+      
 
 window.addEventListener("load",()=>{
 
       SearchCoffee(document.body.className);
-      ptotal.value=OrderObject.Price;
+      ptotal.textContent=OrderObject.Price;
 
       Quantity.value=1;
-  
 
 });
 
@@ -77,7 +77,7 @@ SizesHolder.addEventListener("click",(event)=>{
       SizeChoosed(event);
 
   PriceCounter(OrderObject.option.size.Price,OrderObject.option.Tempreator.Price,OrderObject.option.Milk.Price);
-    ptotal.value=QuantityPrice(OrderObject.OrderPrice,Number(Quantity.value));
+    ptotal.textContent=QuantityPrice(OrderObject.OrderPrice,Number(Quantity.value));
 
  
 });
@@ -107,7 +107,7 @@ SizesHolder.addEventListener("click",(event)=>{
 
               PriceCounter(OrderObject.option.size.Price,OrderObject.option.Tempreator.Price,OrderObject.option.Milk.Price);
    
-              ptotal.value=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
+              ptotal.textContent=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
 
    });
    
@@ -138,7 +138,7 @@ SizesHolder.addEventListener("click",(event)=>{
             
               PriceCounter(OrderObject.option.size.Price,OrderObject.option.Tempreator.Price,OrderObject.option.Milk.Price);
                   
-                 ptotal.value=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
+                 ptotal.textContent=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
 
 
 
@@ -153,7 +153,7 @@ pluss2.addEventListener("click",()=>{
 
        QuantityIncrease(Quantity);
 
-       ptotal.value=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
+       ptotal.textContent=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
 
              PriceCounter(OrderObject.option.size.Price,OrderObject.option.Tempreator.Price,OrderObject.option.Milk.Price);
                    
@@ -166,13 +166,24 @@ pluss2.addEventListener("click",()=>{
 minus2.addEventListener("click",()=>{
            
       QuantityDecrease(Quantity);
-       ptotal.value=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
+       ptotal.textContent=QuantityPrice(OrderObject.OrderPrice,OrderObject.Quantity);
        
                 PriceCounter(OrderObject.option.size.Price,OrderObject.option.Tempreator.Price,OrderObject.option.Milk.Price);
   
 
    
 });
+
+
+import { Slide } from "./OrderBuilder/Ui/SlideToOrder.js";
+
+console.log("java-buying.js loaded");
+Slide();
+
+
+
+
+
 
 
 

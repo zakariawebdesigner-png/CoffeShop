@@ -31,3 +31,5 @@ export const Menu= document.querySelector(".coffee-menue");
 
 export const SizesHolder=document.querySelector(".sizes-categories");
 
+export const Ticking=new  Audio("./Sounds/Ticking.wav");
+export const EndCoocking=new  Audio("./Sounds/EndCoocking.mp3");

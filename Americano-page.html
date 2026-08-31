@@ -57,9 +57,9 @@
                     <div class="Milk">
                          <p>Milk Type</p>
                            <details>
-                            <summary id="milk-sum">☰ Choose milk </summary>
+                            <summary id="milk-sum">☰ Choose milk</summary>
                             <ul class="ul" id="ul">
-                            <li class="li" id="milk1" >No Milk </li>
+                            <li class="li" id="milk1" >No Milk</li>
                             <li class="li" id="milk2" >Regular Milk</li>
                             <li class="li" id="milk3">Oat Milk</li>
                              <li class="li" id="milk4">Almond Milk</li>
@@ -85,9 +85,19 @@
 
               <div class="Tottal-price" id="total" >
                    <b>Tottal price : </b>
-                     <input class="p-total" id="ptotal" readonly >
+                      <div class="p-total" id="ptotal" readonly ></div>
+                                              <p class="Dollar-Signe">$</p>
 
                </div>
+
+               
+<div id="SlidingRoad" class="Order-Button-Container">
+    <button id="SlideButton" class="Orderingbtn" type="button" draggable="true">
+     <div class="OrderSticker" ></div>
+    </button>
+        <div id="SlideEnd" class="SlideEnd"></div>
+    </div>
+</div>
 
 <footer class="footer">
 
@@ -98,6 +108,7 @@
  <a href=""><i class="fa-solid fa-user"></i></a>
 
 </footer>
+
 
 <script type="module" src="java-buying.js" ></script>
     </body>

@@ -1571,44 +1571,21 @@ height: clamp(0.8rem,20vw,1.5rem);
   position: relative;
 display: flex;
 align-items: center;
-justify-content: center;
-width:95% ;
+width:fit-content;
+padding-left:0.5rem ;
+padding-right:0.5rem ;
 height: clamp(1rem,35vh,3.5rem);
 align-self: center;
+  background-color:#733410;
+    border-radius: 0.5rem;
 }
 
 
 .Tottal-price b{
-  background-color:#733410;
-  padding: 1rem;
-  padding-right: 2.5rem;
-  border-radius: 0.5rem;
 font-family: 'Poppins',sans-serif;
 font-size: large;
 color: #d5973f;
-
 }
-
-
-.p-total{
-  
-position: absolute;
-z-index: 1000;
-border: none;
-margin-left: 6rem;
-font-family: 'Poppins',sans-serif;
-font-size: 1rem;
-font-weight: 600;
-width: 1.7rem;
-height: 1.5rem;
-outline: none;
-}
-
-
-
-
-
-
 
 
 
@@ -1732,6 +1709,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
+    gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;
    padding-top: 0.4rem;
@@ -1854,22 +1832,85 @@ right: clamp(1rem,27vw,1.5rem);
 }
 
 .p-total{
-  
-position: absolute;
-display: flex;
-padding-left: 0.4rem;
+  display: flex;
+align-items: center;
+justify-content: center;
 z-index: 1000;
-border: none;
-background-color: transparent !important;
-margin-left: 6rem;
 font-family: 'Poppins',sans-serif;
 font-size: 1rem;
 font-weight: 600;
-width: 1.7rem;
+width: auto;
 height: 1.5rem;
+background-color: transparent;
 
-outline: none !important;
 }
 
+
+.Dollar-Signe{
+  font-size: larger;
+  font-weight:500;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+.Order-Button-Container{
+position: relative;
+display: flex;
+width: 10rem;
+height: 3rem;
+border-radius: 2rem;
+   background: #C49A5F;
+align-self: center;
+align-items: center;
+padding-left: 0.2rem;
+}
+
+.Orderingbtn{
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 2.8rem;
+height: 2.8rem;
+
+border-radius: 1.5rem;
+border: 2px solid #E8D5BB  ;
+    background-color:  #6c4329;
+    
+    box-shadow:
+        0 3px 8px rgba(53,46,46,0.4);
+    cursor: grab;
+touch-action: none;
+z-index: 100;
+}
+
+.Orderingbtn.Slow{
+  
+transition:left 2s ease;
+}
+
+.OrderSticker{
+background-image: url(Images/purchase-order.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+width: 80%;
+height: 80%;
+
+}
+
+
+.SlideEnd{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+right: 0;
+width: 2.9rem;
+height: 2.9rem;
+border-radius: 1.5rem;
+z-index: 20;
+
+}
 
 

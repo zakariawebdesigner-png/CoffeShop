@@ -1,6 +1,6 @@
 let Count=0;
 
-import { small,midium,large,xl,xxl } from "../CalcElements.js";
+import { small,midium,large,xl,xxl } from '../CalcElements.js' ;
 
 
  const  SizesArray=[small,midium,large,xl,xxl];
