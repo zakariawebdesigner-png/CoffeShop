@@ -1054,7 +1054,6 @@ animation: move-comment 30s  linear infinite  ;
 }
 
 
-
 .homme1{
 position: absolute;
 width: 20%;
@@ -1191,7 +1190,7 @@ margin-top: -15px;
 .person-width-beard{
 
 
-background-image: url(Images/person-holds-text-cloud2.png);
+background-image: url(Images/person-holds-text-cloud2.jpg);
 background-position: center;
 background-size: contain;
 background-repeat: no-repeat;
