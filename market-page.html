@@ -11,34 +11,50 @@
     <link href="style.css" rel="stylesheet">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
  
  
  
-<header>
- <div class="logo"></div>
- <div class="background-from-above"></div>
+<header id="Header">
 
-   <input id="toggle" type="checkbox" >
+<div class="FirstContainer">
+ <div class="logo"></div>
+ <p class="BrandName">Z-Coffee</p>
+  <input id="toggle" type="checkbox" >
     
  <div class="notification-toggle">
      <div class="notification"></div>
-  <label class="toggle-label" for="toggle" >☰</label>
+  <label class="toggle-label" id="toggle-label" for="toggle" >☰</label>
  </div>
+ 
   <a class="register"  >Register</a>
 <nav >
 
     <a class="home" href="">Home</a>
-        <a class="Menue" href="">Menue</a>
+        <a class="Menue" href="">Favoret</a>
     <a class="Services" href="">Services</a>
     <a class="Reviews" href="">Reviews</a>
-    <a class="About-us" href="">About us </a>
-    <a href="" class="register" >Register</a>
+    <a class="About-us" href="">About</a>
+        <a class="About-us" href="">Theme</a>
+
 
 </nav>
+</div>
+
+<div class="SearchContainer" id="SearchContainer">
+   
+    <input id="SerachForCoffee" class="SerachForCoffee" type="search" placeholder="Search"  >
+
+              <button id="Searchbtn" class="Searchbtn" >
+
+         <div id="SearchSticker" class="SearchSticker"></div>
+
+      </button>
+
+</div>
 
 </header>
 
@@ -47,8 +63,11 @@
 
       
 <section class="section1">
-             <b class="Menue-text">Menue  </b>
+    <div class="Menue-Types-texts">
+           <b class="Menue-text">Menue  </b>
              <p class="types">15 types</p>
+    </div>
+          
    <div class="coffee-menue">
   
 
@@ -168,7 +187,7 @@
  
           </div>
 
-    <div class="coffe-container" data-name="Restretto" onclick="window.location.href='Restretto.html'">
+    <div class="coffe-container" data-name="Restretto" onclick="window.location.href='Ristretto.html'">
           <a>
             
                <div class="coffe10"></div>
@@ -181,7 +200,7 @@
           </div>
 
  
-    <div class="coffe-container" data-name="Cold brew" onclick="window.location.href='Cold-brew.html'">
+    <div class="coffe-container" data-name="Cold brew" onclick="window.location.href='Cold-Brew.html'">
         <a>
 
             
@@ -195,7 +214,7 @@
           </div>
 
 
-    <div class="coffe-container" data-name="Ice coffee" onclick="window.location.href='Ice-coffe.html'">
+    <div class="coffe-container" data-name="Ice coffee" onclick="window.location.href='Iced-Coffee.html'">
                                            <a>
             
                <div class="coffe12"></div>
@@ -363,7 +382,7 @@
  
           </div>
 
-    <div class="coffe-container" data-name="Restretto" onclick="window.location.href='Restretto.html'">
+    <div class="coffe-container" data-name="Restretto" onclick="window.location.href='Ristretto.html'">
                                                                  <a>
             
                <div class="coffe10"></div>
@@ -376,20 +395,20 @@
           </div>
 
  
-    <div class="coffe-container" data-name="Cold brew" onclick="window.location.href='Cold-brew.html'">
+    <div class="coffe-container" data-name="Cold brew" onclick="window.location.href='Cold-Brew.html'">
         <a>
 
             
                <div class="coffe11"></div>
 
                                         </a>
-                                     <p class="coffe1-text">Cold brew $13</p>
+                                     <p class="coffe1-text">Cold Brew $13</p>
 
  
           </div>
 
 
-    <div class="coffe-container" data-name="Ice coffee" onclick="window.location.href='Ice-coffe.html'">
+    <div class="coffe-container" data-name="Ice coffee" onclick="window.location.href='Iced-Coffee.html'">
                                            <a>
             
     <div class="coffe12"></div>
@@ -754,16 +773,7 @@
 
 </footer>
 
-
+<script type="module" src="Market-Folder/Market.js"  ></script>
 </body>
-
-
-
-
-
-
-
-
-
 
  </html>
