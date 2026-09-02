@@ -20,12 +20,13 @@ function Ticking_SoundPlayer(){
   if(OrderObject.option.size.name==""){
         window.alert("Select first");
         
-         return;
+                 return false;
      }
 
 
     isTicking = true;
     playTick();                           // immediate tick on grab
+    return true;
   
 }
 

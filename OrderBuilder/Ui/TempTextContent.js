@@ -8,7 +8,7 @@ import { OrderObject } from "../Data/OrderRecord.js";
 
         if(CheckTempReturns.isValid==false){
             
-             summary="☰ Choose milk";
+             summary.textContent="☰ Choose the tempreture";
          };
 
         

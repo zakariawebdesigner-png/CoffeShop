@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why the Coffee Slider Error Repeated</title>
+  <style>
+    @page { size: A4; margin: 16mm; }
+    :root { --coffee: #603c28; --cream: #fffaf2; --ink: #29231f; --muted: #6e625a; --line: #e8ddd2; --gold: #c47d32; --green: #2f7654; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 15px/1.55 Georgia, 'Times New Roman', serif; }
+    main { max-width: 820px; margin: 0 auto; padding: 26px 24px 40px; }
+    h1, h2, h3 { font-family: Arial, sans-serif; line-height: 1.15; }
+    h1 { margin: 0 0 10px; color: var(--coffee); font-size: 34px; }
+    h2 { margin: 28px 0 10px; color: var(--coffee); font-size: 22px; border-bottom: 2px solid var(--gold); padding-bottom: 5px; }
+    h3 { margin: 18px 0 6px; font-size: 17px; }
+    .subtitle { color: var(--muted); font-size: 17px; margin: 0; }
+    .hero { border-left: 7px solid var(--gold); padding: 8px 0 10px 18px; margin-bottom: 22px; }
+    .answer, .tip { padding: 14px 17px; border-radius: 7px; margin: 14px 0; }
+    .answer { background: #f3e4d3; border: 1px solid #e1c8ad; }
+    .tip { background: #e4f1e9; border-left: 5px solid var(--green); }
+    .flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 8px; align-items: center; margin: 16px 0; }
+    .step { background: white; border: 1px solid var(--line); border-radius: 6px; padding: 10px; text-align: center; font-family: Arial, sans-serif; font-size: 13px; }
+    .arrow { color: var(--gold); font-weight: bold; font-size: 20px; }
+    code { font: 13px/1.45 Consolas, 'Courier New', monospace; background: #f4eee8; padding: 2px 4px; border-radius: 3px; }
+    pre { background: #29231f; color: #fff8ed; padding: 13px 15px; overflow-x: auto; border-radius: 6px; font: 12.5px/1.5 Consolas, 'Courier New', monospace; }
+    .label { color: var(--gold); font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; letter-spacing: .05em; text-transform: uppercase; }
+    li { margin: 6px 0; }
+    footer { margin-top: 30px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; font-size: 13px; }
+    @media print { body { background: white; } main { padding: 0; } .answer, .tip, .step, pre { break-inside: avoid; } h2 { break-after: avoid; } }
+    @media (max-width: 620px) { .flow { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); text-align: center; } h1 { font-size: 28px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="label">Coffee site debugging guide</div>
+      <h1>Why the Slider Error Repeated</h1>
+      <p class="subtitle">A beginner-friendly explanation of the size check, pointer events, and the fixes.</p>
+    </header>
+
+    <section class="answer">
+      <strong>The short answer:</strong> the slider checked the size correctly, but after showing the error it continued starting the drag. Also, the size button could look selected without updating the real order data. Those two things made the page feel stuck.
+    </section>
+
+    <h2>1. Where the size is stored</h2>
+    <p>Your order begins with an empty size:</p>
+    <pre>size: {
+  name: "",
+  Price: 0
+}</pre>
+    <p>An empty name means that the user has not chosen a size. After a size click, <code>SizeChoosed(event)</code> should change it to a real value such as <code>"Small"</code>.</p>
+
+    <h2>2. What happens when the user slides</h2>
+    <div class="flow">
+      <div class="step">Finger touches slider</div><div class="arrow">&rarr;</div>
+      <div class="step">Check the selected size</div><div class="arrow">&rarr;</div>
+      <div class="step">Start dragging only if valid</div>
+    </div>
+    <p>The check lives in <code>Ticking_SoundPlayer()</code>:</p>
+    <pre>if (OrderObject.option.size.name == "") {
+  window.alert("Select first");
+  return false;
+}
+
+return true;</pre>
+    <p><code>false</code> means “the check failed.” <code>true</code> means “it is safe to continue.”</p>
+
+    <h2>3. The original mistake</h2>
+    <p>The slider used to call the check, but ignored its answer:</p>
+    <pre>Draging = true;
+Ticking_SoundPlayer();
+SlideButton.setPointerCapture(event.pointerId);</pre>
+    <p>Calling a function does not automatically stop the current function. Even when the alert appeared, the next lines still ran. <code>setPointerCapture()</code> tells the browser to keep sending pointer events to the slider. On a phone, that can make later taps feel like the slider still owns the touch.</p>
+
+    <h2>4. The important fix</h2>
+    <pre>if (!Ticking_SoundPlayer()) return;
+
+Draging = true;
+SlideButton.setPointerCapture(event.pointerId);</pre>
+    <p>Read this as: “If the check does <em>not</em> return true, leave this function now.” The drag only starts after a valid size has been confirmed.</p>
+
+    <h2>5. The size-click mistake</h2>
+    <p>The click counter used to be allowed to stop the handler before the order was updated:</p>
+    <pre>HandleClicks(Size);
+if (Size.dataset.Clicked == "true") return;
+SizeChoosed(event);</pre>
+    <p>This created two different truths:</p>
+    <ul>
+      <li>The button could look selected through <code>dataset.Clicked</code>.</li>
+      <li>The real order could still have <code>size.name == ""</code>.</li>
+    </ul>
+    <p>The slider checks the real order object, not the button’s appearance.</p>
+
+    <h2>6. The size-click fix</h2>
+    <pre>HandleClicks(Size);
+SizeChoosed(event);</pre>
+    <p>Now every real size-button click updates:</p>
+    <pre>OrderObject.option.size.name
+OrderObject.option.size.Price</pre>
+    <p>The visual click tracking can still run, but it cannot prevent the important data update.</p>
+
+    <h2>7. A small safety check</h2>
+    <pre>let Size = event.target.closest("button");
+if (!Size) return;</pre>
+    <p><code>closest("button")</code> can return nothing if the click did not come from a button. The safety check prevents code from trying to use a missing button.</p>
+
+    <div class="tip"><strong>Remember this debugging rule:</strong> when a function returns a success or failure value, the caller must use that value. Write <code>if (!check()) return;</code>, not just <code>check();</code>. Also trust the real data object more than a visual class, attribute, or style.</div>
+
+    <footer>Files involved: <code>java-buying.js</code>, <code>OrderBuilder/Ui/TickingSoundRepeat.js</code>, and <code>OrderBuilder/Ui/SlideToOrder.js</code>.</footer>
+  </main>
+</body>
+</html>

@@ -69,11 +69,9 @@ SizesHolder.addEventListener("click",(event)=>{
       
    let Size=event.target.closest("button");
 
+  if(!Size)return;
 
      HandleClicks(Size);
-
-     if(Size.dataset.Clicked=="true")return;
-
       SizeChoosed(event);
 
   PriceCounter(OrderObject.option.size.Price,OrderObject.option.Tempreator.Price,OrderObject.option.Milk.Price);

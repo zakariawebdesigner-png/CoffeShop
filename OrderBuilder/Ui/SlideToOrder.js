@@ -20,15 +20,15 @@
             SlidingRoad.appendChild(SlideButton);
     });
 
-//The Part that is responsible forsliding the button
+//The Part that is responsible for  sliding the button
 
                
 
      SlideButton.addEventListener("pointerdown",(event)=>{
        
-      
-        Draging=true;
-                  Ticking_SoundPlayer();
+      if(!Ticking_SoundPlayer())return;
+
+      Draging=true;
               SlideButton.classList.remove("Slow");
 
         SlideButton.setPointerCapture(event.pointerId);
