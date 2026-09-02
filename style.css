@@ -1949,7 +1949,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 
 
 
-.afogado-text{
+.Afogado-text{
   
   position: absolute;
     top: -15px;
@@ -2581,13 +2581,6 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 .Iced-Coffee-text{
   
   position: absolute;
-    top: -15px;
-right: clamp(1rem,27vw,1.5rem);
-  font-size: clamp(0.3rem,5vw,1rem);
-  
-  color: #e2b679;
-  font-weight: 600;
-}
 
   .Viennese-body{
     display: flex;
@@ -2618,6 +2611,14 @@ right: clamp(1rem,27vw,1.5rem);
     color: #e2b679;
     font-weight: 600;
   }
+
+    top: -15px;
+right: clamp(1rem,27vw,1.5rem);
+  font-size: clamp(0.3rem,5vw,1rem);
+  
+  color: #e2b679;
+  font-weight: 600;
+}
 
 
 
