@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="Viennese-body">
+  <a class="arrow" href="market-page.html"></a>
+  <div class="photo-buying-container">
+    <div class="Viennese-photo"></div>
+    <p class="Viennese-text">Viennese coffee: $18</p>
+    <div class="sizes">
+      <p class="size-text">Size:</p>
+      <div class="sizes-categories">
+        <button id="small">S</button>
+        <button id="midium">M</button>
+        <button id="large">L</button>
+        <button id="xl">XL</button>
+        <button id="xxl">XXL</button>
+      </div>
+    </div>
+  </div>
+  <div class="Extra">
+    <div class="shugar-container">
+      <p class="placeholder-shugar">Shugar Shots</p>
+      <button class="minus" id="minus">-</button>
+      <input type="number" class="shugar" id="shugar" value="0" readonly required>
+      <button class="pluss" id="pluss">+</button>
+    </div>
+    <div class="tempreture">
+      <p>Tempreture</p>
+      <details>
+        <summary id="summary">Choose the tempreture</summary>
+        <ul>
+          <li class="li-temp">Hot</li>
+          <li class="li-temp">Warm</li>
+        </ul>
+      </details>
+    </div>
+    <div class="Milk">
+      <p>Milk Type</p>
+      <details>
+        <summary id="milk-sum">Choose milk</summary>
+        <ul class="ul" id="ul">
+          <li class="li" id="milk1">No Milk</li>
+          <li class="li" id="milk2">Regular Milk</li>
+          <li class="li" id="milk3">Oat Milk</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+  <div class="how-many">
+    <p>How many cups:</p>
+    <button id="minus2">-</button>
+    <input type="number" class="shugar" id="Quantity" value="1" readonly required>
+    <button id="pluss2">+</button>
+  </div>
+  <div class="Tottal-price" id="total">
+    <b>Total price:</b>
+    <div class="p-total" id="ptotal" readonly></div>
+    <p class="Dollar-Signe">$</p>
+  </div>
+  <div id="SlidingRoad" class="Order-Button-Container">
+    <button id="SlideButton" class="Orderingbtn" type="button" draggable="true"><div class="OrderSticker"></div></button>
+    <div id="SlideEnd" class="SlideEnd"></div>
+  </div>
+  <footer class="footer">
+    <a href=""><i class="fa-solid fa-house"></i></a>
+    <a href=""><i class="fa-solid fa-compass"></i></a>
+    <a href=""><i class="fa-solid fa-heart"></i></a>
+    <a href=""><i class="fa-solid fa-comment"></i></a>
+    <a href=""><i class="fa-solid fa-user"></i></a>
+  </footer>
+  <script type="module" src="java-buying.js"></script>
+</body>
+</html>

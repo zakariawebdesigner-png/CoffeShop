@@ -123,7 +123,7 @@ export const Coffees = [
 
 {
     id: 19,
-    Name: "Flat white",
+    Name: "Flat-White",
     Price: 5.5,
 
     option: {
@@ -396,7 +396,7 @@ export const Coffees = [
 
 {
     id: 26,
-    Name: "Cold brew",
+    Name: "Cold-Brew",
     Price: 5.5,
 
     option: {
@@ -435,7 +435,7 @@ export const Coffees = [
 
 {
     id: 27,
-    Name: "Iced coffee",
+    Name: "Iced-Coffee",
     Price: 4,
 
     option: {
