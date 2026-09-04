@@ -103,16 +103,53 @@ padding-right: 0.3rem;
    width: clamp(5rem,20vw,10rem);
     height: clamp(20rem,50vh,40rem);
        
-       background-color:#dcd2c6;
+       background-color:#ed9e3df2;
          border-radius: clamp(0.5rem,2vw,1rem);
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
  }
+
+
+
+.SettingsTextContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.2rem;
+  height: fit-content;
+}
+
+
+
+
+
+
+
+.SettingsText{
+ font-weight: 600;
+}
+
+.LineSettings{
+  width: 90%;
+  height: 2px;
+  background-color: #352e2e;
+
+  margin-top: 0;
+}
+
+
   nav a{
     text-decoration: none;
     color: rgb(11, 6, 6);
-       
-         font-weight: 500;
+       width: fit-content;
+        
+      border-radius: 0.4rem;
+      padding: 0.2rem;
+    
+ }
+
+  nav a:hover{
+    background-color: #733410;
  }
  .About-us{
     
@@ -123,6 +160,7 @@ padding-right: 0.3rem;
 
 .notification-toggle{
    display: flex;
+   align-items: center;
    gap: 10px;
  
  }
@@ -134,8 +172,8 @@ padding-right: 0.3rem;
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   width: clamp(1.5rem,7.5vw,15rem);
-   height: clamp(1.5rem,7.5vw,15rem);
+   width: clamp(1rem,6vw,15rem);
+   height: clamp(1rem,6vw,15rem);
 
       
       
@@ -148,16 +186,16 @@ padding-right: 0.3rem;
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   width: clamp(1.5rem,7.5vw,15rem);
-   height: clamp(1.5rem,7.5vw,15rem);
-
+  width: clamp(1rem,6vw,15rem);
+   height: clamp(1rem,6vw,15rem);
 }
 
 
 
 
-  nav a:hover{
-   transform: translateY(-5px);
+  nav.Slide{
+    transform: translateX(-7%);
+
  
    
  }
@@ -166,16 +204,6 @@ padding-right: 0.3rem;
  #toggle{
     display: none;
  }
-
- #toggle:checked ~ nav{
-    transform: translateX(0);
-    cursor: pointer;
-
- }
- 
-
-
- 
 
 .logo{
 
@@ -479,7 +507,7 @@ z-index: 1;
 position: relative;
    display: flex;
    flex-direction: column;
-
+gap: 0.5rem;
    flex-direction: column;
    width: 100%;
     height: clamp(28rem,122vh,47rem);
@@ -997,7 +1025,21 @@ padding-left:0.5rem ;
 .popular{
   color:#6f4811;
   font-weight: 500;
-  padding-bottom: 0.3rem;
+
+  width: fit-content;
+
+   padding-right:0.6rem ;
+    padding-left:0.6rem ;
+
+  margin-left: 0.6rem;
+
+border-radius: 0.9rem;
+
+padding-top: 0.2rem;
+padding-bottom:0.2rem;
+  background-color:white;
+      box-shadow: 0 0.1rem 0.5rem rgba(80, 45, 15, 0.107);
+
 }
 .Popular-container{
   display: flex;
@@ -1264,6 +1306,214 @@ z-index: 2;
     opacity: 1;
   }
 }
+
+
+.ServicesSection{
+
+display: flex;
+flex-direction: column;
+width:100%;
+justify-self: center;
+align-items: center;
+gap: 0.5rem;
+min-height:13rem;
+
+
+}
+
+
+
+.SectionTittle{
+display: flex;
+width:fit-content ;
+height: fit-content;
+justify-content: center;
+ background-color: #f1ae7771;
+ border-radius: 0.5rem;
+ padding-left:0.3rem ;
+  padding-right:0.3rem ;
+
+}
+
+.ServiceTittle p{
+line-height: 0;
+font-weight: 600;
+font-size: larger;
+ color:#6f4811;
+
+}
+
+
+
+
+
+.TheServices{
+  display: flex;
+
+  width:100%;
+
+justify-content: center;
+min-height:95%;
+
+flex-wrap: wrap;
+gap: 0.2rem;
+}
+
+
+.Quality,.FastDelever,.EasyOrdering,.BestOffers,.WideSelection,.CustemorSupport{
+
+display: flex;
+flex-direction: column;
+width: 9rem;
+height: 8rem;
+align-items: center;
+justify-content: center;
+padding-top: 0.2rem;
+background-color: #e4ba57;
+gap: 0.8rem;
+border-radius: 0.7rem;
+}
+
+.Service-Pic-Holder{
+display: flex;
+justify-content: center;
+align-items: center;
+width:40%;
+height: 45%;
+border-radius: 1.8rem;
+background-color: #e9c695;
+      
+    box-shadow: 0 0.3rem 0.7rem rgba(80, 45, 15, 0.477);
+
+}
+
+
+.Quality .Service-Pic-Holder div{
+
+
+background-image: url(Images/cup-of-drink.png);
+background-size: contain;
+background-repeat: no-repeat;
+width:2rem;
+height:2rem;
+      
+
+}
+
+
+
+
+.FastDelever .Service-Pic-Holder div{
+
+
+background-image: url(Images/delivery-bike.png);
+background-size: contain;
+background-repeat: no-repeat;
+width:2rem;
+height:2rem;
+      
+
+}
+
+
+
+
+.EasyOrdering .Service-Pic-Holder div{
+
+
+background-image: url(Images/process.png);
+background-size: contain;
+background-repeat: no-repeat;
+width:2rem;
+height:2rem;
+      
+
+}
+
+
+
+.BestOffers .Service-Pic-Holder div{
+
+
+background-image: url(Images/tag.png);
+background-size: contain;
+background-repeat: no-repeat;
+width:2rem;
+height:2rem;
+      
+
+}
+
+
+
+.WideSelection .Service-Pic-Holder div{
+
+
+background-image: url(Images/choice.png);
+background-size: contain;
+background-repeat: no-repeat;
+width:2rem;
+height:2rem;
+      
+
+}
+
+
+
+
+
+
+.CustemorSupport .Service-Pic-Holder div{
+
+
+background-image: url(Images/listening.png);
+background-size: contain;
+background-repeat: no-repeat;
+width:2rem;
+height:2rem;
+      
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ServiceTittle{
+  line-height: 0;
+  font-size: medium;
+  margin-bottom: 0;
+  margin-top: 0;
+   font-weight: 600;
+}
+
+
+.ServiceDiscription{
+  font-size: x-small;
+  text-align: center;
+  
+    margin-top: 0;
+}
+
+
 
 
 .section4{
@@ -1555,7 +1805,7 @@ footer a i{
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    height: 90vh;
         gap: 0.5rem;
     overflow-x: hidden;
 background-color: #936526;

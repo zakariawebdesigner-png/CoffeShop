@@ -1,8 +1,8 @@
 
 
 import { SerachForCoffee,SearchContainer,toggle_label,notification,BrandName,Header } from "../Market-Elements.js";
-
-
+import {NavDisappear} from "./Settings-Bar-Silde.js";
+import { ToggleClicked } from "../Market.js";
 
 
 function HeaderScrollEffect(){
@@ -25,6 +25,13 @@ function HeaderScrollEffect(){
               notification.classList.add("Scroll");
 
               BrandName.style.color="#dcd2c6";
+              if(ToggleClicked){
+                    NavDisappear();
+                    toggle_label.click();
+              }
+
+               
+
 
 
       }
@@ -42,8 +49,9 @@ function HeaderScrollEffect(){
                     notification.classList.add("Scroll-Reverse");
 
               BrandName.style.color="black";
-     
               
+             
+
       }
 
 

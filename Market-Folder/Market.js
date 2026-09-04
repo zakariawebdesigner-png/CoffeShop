@@ -4,6 +4,8 @@ const notification=document.getElementById("notification");
 
 
 import { HeaderScrollEffect } from "./Ui/Header-Scrool-Style.js";
+import { NavBar ,toggle_label} from "./Market-Elements.js"; 
+import { NavAppear,NavDisappear } from "./Ui/Settings-Bar-Silde.js";
 
 
 window.addEventListener("load",()=>{
@@ -20,6 +22,25 @@ window.addEventListener("load",()=>{
 
 });
 
+export let ToggleClicked=false;
+
+toggle_label.addEventListener("click",()=>{
+
+  if(ToggleClicked){
+    NavDisappear();
+    ToggleClicked=!ToggleClicked;
+  }
+  else if(!ToggleClicked){
+       NavAppear();
+           ToggleClicked=!ToggleClicked;
+
+  }
+
+
+
+
+
+});
 
 
 window.addEventListener("scroll",()=>{

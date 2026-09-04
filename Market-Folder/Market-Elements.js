@@ -8,6 +8,6 @@
             export const Square=document.getElementById("Square");
 
 
-
-
        export  const BrandName=document.getElementById("BrandName");
+              export  const NavBar=document.getElementById("NavBar");
+
