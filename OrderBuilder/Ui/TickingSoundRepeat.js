@@ -6,6 +6,7 @@ import { OrderObject } from "../Data/OrderRecord.js";
 
 
 let isTicking=false;
+let sizeErrorShown=false;
 function playTick() {
     if(!isTicking) return;
    Ticking.play();
@@ -18,12 +19,16 @@ Ticking.addEventListener("ended", () => {
 
 function Ticking_SoundPlayer(){
   if(OrderObject.option.size.name==""){
-        window.alert("Select first");
+                if(!sizeErrorShown){
+                    window.alert("Select first");
+                    sizeErrorShown=true;
+                }
         
                  return false;
      }
 
 
+        sizeErrorShown=false;
     isTicking = true;
     playTick();                           // immediate tick on grab
     return true;

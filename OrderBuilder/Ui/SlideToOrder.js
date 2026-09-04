@@ -25,7 +25,7 @@
                
 
      SlideButton.addEventListener("pointerdown",(event)=>{
-       
+       console.log(Ticking_SoundPlayer());
       if(!Ticking_SoundPlayer())return;
 
       Draging=true;
