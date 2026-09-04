@@ -1364,7 +1364,8 @@ gap: 0.2rem;
 
 display: flex;
 flex-direction: column;
-width: 9rem;
+width: clamp(8rem,48vw,13rem);
+
 height: 8rem;
 align-items: center;
 justify-content: center;
