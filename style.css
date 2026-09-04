@@ -1567,12 +1567,11 @@ background-color: #936526;
 
 .arrow{
    position: relative;
-   margin-left: 0.2rem;
-   margin-bottom: 0.3rem;
-   padding-left: 0.1rem;
+   align-self: flex-start;
   border-radius: 0.5rem;
   width: clamp(0.3rem,15vw,2.5rem);
    height: clamp(0.3rem,15vw,2rem);
+   
 background-image: url(Images/arrow-right.png);
 background-size: contain;
 background-repeat: no-repeat;
@@ -2581,6 +2580,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 .Iced-Coffee-text{
   
   position: absolute;
+}
 
   .Viennese-body{
     display: flex;
@@ -2611,17 +2611,6 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     color: #e2b679;
     font-weight: 600;
   }
-
-    top: -15px;
-right: clamp(1rem,27vw,1.5rem);
-  font-size: clamp(0.3rem,5vw,1rem);
-  
-  color: #e2b679;
-  font-weight: 600;
-}
-
-
-
 
 
 .p-total{
@@ -2704,6 +2693,77 @@ height: 2.9rem;
 border-radius: 1.5rem;
 z-index: 20;
 
+}
+
+@media screen and (max-width: 480px){
+  body[class$="-body"]{
+    width: 100%;
+    max-width: 100vw;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .photo-buying-container{
+    width: 100%;
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+  }
+
+  .sizes{
+    width: 60vw;
+    min-width: 0;
+  }
+
+  .sizes-categories button{
+    font-size: 1rem;
+  }
+
+  .Extra{
+    width: 100%;
+    height: 9rem;
+    margin-left: 0;
+    padding-right: 0.3rem;
+    box-sizing: border-box;
+  }
+
+  .shugar-container{
+    gap: 0.4rem;
+  }
+
+  .placeholder-shugar{
+    margin-left: 0.2rem;
+  }
+
+  .tempreture,
+  .Milk{
+    gap: 0.3rem;
+    padding-left: 0.2rem;
+  }
+
+  .tempreture p,
+  .Milk p{
+    font-size: 0.8rem;
+    padding-left: 0;
+  }
+
+  summary{
+    width: 45vw;
+    font-size: 0.7rem;
+  }
+
+  ul,
+  .ul{
+    left: 0;
+    width: 55vw;
+    max-width: 55vw;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+
+  .li-temp,
+  .li{
+    width: 55vw;
+  }
 }
 
 
