@@ -1,7 +1,7 @@
 
 
 import { SerachForCoffee,SearchContainer,toggle_label,notification,BrandName,Header } from "../Market-Elements.js";
-import {NavDisappear} from "./Settings-Bar-Silde.js";
+import {NavDisappear} from "../../Settings-Bar-Silde.js";
 import { ToggleClicked } from "../Market.js";
 
 
@@ -26,7 +26,7 @@ function HeaderScrollEffect(){
 
               BrandName.style.color="#dcd2c6";
               if(ToggleClicked){
-                    NavDisappear();
+                    NavDisappear(NavBar);
                     toggle_label.click();
               }
 

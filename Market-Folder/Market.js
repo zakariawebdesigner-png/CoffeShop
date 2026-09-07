@@ -4,8 +4,9 @@ const notification=document.getElementById("notification");
 
 
 import { HeaderScrollEffect } from "./Ui/Header-Scrool-Style.js";
-import { NavBar ,toggle_label} from "./Market-Elements.js"; 
-import { NavAppear,NavDisappear } from "./Ui/Settings-Bar-Silde.js";
+import { InitializeCoffeeMenue } from "./Ui/Coffee-Menue-Carousel.js";
+import { toggle_label,NavBar} from "./Market-Elements.js"; 
+import { NavAppear,NavDisappear } from "../Settings-Bar-Silde.js";
 
 
 window.addEventListener("load",()=>{
@@ -24,23 +25,6 @@ window.addEventListener("load",()=>{
 
 export let ToggleClicked=false;
 
-toggle_label.addEventListener("click",()=>{
-
-  if(ToggleClicked){
-    NavDisappear();
-    ToggleClicked=!ToggleClicked;
-  }
-  else if(!ToggleClicked){
-       NavAppear();
-           ToggleClicked=!ToggleClicked;
-
-  }
-
-
-
-
-
-});
 
 
 window.addEventListener("scroll",()=>{
@@ -54,6 +38,20 @@ import { Coffees } from "../OrderBuilder/Data/Coffee.js";
 import { SearchResult_Container, SerachForCoffee } from "./Market-Elements.js";
 import { URL_Transport } from "./Ui/URL-Handeling.js";
  let InputsNameArray=[];
+
+InitializeCoffeeMenue();
+
+
+
+
+
+
+
+
+
+
+
+
 
 SerachForCoffee.addEventListener("input",()=>{
     
@@ -74,8 +72,27 @@ if(SerachForCoffee.value==""){
   SearchResult_Container.innerHTML="";
 
 
-
 }
+
+
+
+
+toggle_label.addEventListener("click",()=>{
+
+  if(ToggleClicked){
+    NavDisappear(NavBar);
+    ToggleClicked=!ToggleClicked;
+  }
+  else if(!ToggleClicked){
+       NavAppear(NavBar);
+           ToggleClicked=!ToggleClicked;
+
+  }
+
+});
+
+
+
 
 
 
@@ -91,6 +108,50 @@ SearchResult_Container.addEventListener("click",(event)=>{
       let InputsName=ChoosedInput.querySelector(".ResultName");
 
 URL_Transport(InputsName.textContent);
+
+
+
+});
+
+
+
+import { RedHeart,TransparentHeart } from "./Ui/Like-effect.js";
+import { MenueCoffee_Heart } from "./Market-Elements.js";
+
+
+
+
+
+
+MenueCoffee_Heart.forEach(heart=>{
+heart.dataset.Clicked=false; 
+
+heart.addEventListener("click",(e)=>{
+  
+  
+e.stopPropagation();
+
+
+e.preventDefault();
+
+if(heart.dataset.Clicked=="false"){
+
+  
+RedHeart(heart);
+heart.dataset.Clicked="true";
+
+}
+
+       else if(heart.dataset.Clicked=="true"){
+         
+
+TransparentHeart(heart);
+heart.dataset.Clicked="false";
+
+}
+
+
+});
 
 
 

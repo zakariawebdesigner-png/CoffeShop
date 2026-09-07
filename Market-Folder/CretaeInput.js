@@ -29,6 +29,11 @@
  const ResultPic=document.createElement("div");
 
             ResultPic.className="ResultPic";
+
+            ResultPic.style.backgroundImage=`url("./Images/${CoffName}.jpg")`;
+
+            console.log(ResultPic.style.backgroundImage);
+            
                CoffeeResult.appendChild(ResultPic);
                
 

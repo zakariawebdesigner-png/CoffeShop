@@ -1,15 +1,15 @@
  
 
- import { NavBar } from "../Market-Elements.js";
 
 
- function NavAppear(){
+
+ function NavAppear(NavBar){
     NavBar.classList.add("Slide");
    
 
  }
 
- function NavDisappear(){
+ function NavDisappear(NavBar){
     NavBar.classList.remove("Slide");
    
 

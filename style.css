@@ -76,7 +76,6 @@ justify-content: space-between;
 .toggle-label{
    font-size: clamp(1.2rem,6vw,7rem);
   padding-left: 0.3rem;
-padding-right: 0.3rem;
 }
 
 .toggle-label:active{
@@ -143,7 +142,7 @@ padding-right: 0.3rem;
     text-decoration: none;
     color: rgb(11, 6, 6);
        width: fit-content;
-        
+        font-size: medium;
       border-radius: 0.4rem;
       padding: 0.2rem;
     
@@ -266,10 +265,9 @@ animation: ScrollAnimation 0.5s linear forwards;
     opacity: 1;
   }
 
-   100%{
+  100% {
      width:2.5rem;
     opacity:1;
-   
   }
 
 }
@@ -419,7 +417,7 @@ padding-top:0.4rem ;
 }
 
 .ResultPic{
-  background-image: url(Images/Afogado.jpg);
+ 
   width: 4rem;
 height:4rem ;
 background-size: cover;
@@ -491,18 +489,6 @@ gap: 0.3rem;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
  .section1{
 z-index: 1;
 position: relative;
@@ -549,23 +535,67 @@ padding-right: 0.1rem;
 margin-top: 0;
 }
 
+
+
+.CoffeeMenue-Container{
+
+  display: flex;
+  width: 100%;
+
+  height: fit-content;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-top:0.2rem ;
+      padding-bottom:0.2rem ;
+      background-color: #352e2e1c;
+     
+}
+
+
+.CoffeeMenue-Container {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.CoffeeMenue-Container::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
+
  .coffee-menue{
    display: flex;
+
   gap: 20px;
    align-items: flex-start;
    padding-top: 0.1rem;
    height:fit-content;
+scrollbar-width: none;
 
    padding-bottom: 1.3rem;
    width: max-content;
-   animation: slide 40s linear infinite;
 
  }
 
-.coffee-menue:active {
-  animation-play-state: paused;
-  
+
+
+.MenueCoffee-Heart{
+  position: absolute;
+  left:81%;
+  top: 4%;
+  z-index: 999999;
+  color: #352e2e;
 }
+
+
+
+.MenueCoffee-Heart.fa-solid.fa-heart{
+  position: absolute;
+  left:81%;
+  top: 4%;
+  z-index: 999999;
+  color: #352e2e;
+}
+
 
 
 
@@ -581,7 +611,8 @@ position: relative;
    width: clamp(7.9rem,21vw,13rem);
    height: clamp(5rem,18.7vw,13.7rem);
    background:linear-gradient(45deg,#936526,#F5EBDD,white);
-   
+   flex-shrink: 0;
+      box-shadow: 0 5px 15px rgba(53, 46, 46, 0.518);
 }
 
 
@@ -603,7 +634,7 @@ position: relative;
 
  
  .coffe1{
-    
+    position: relative;
      border-radius: 1rem;
      
    background-image: url(Images/Espresso.jpg);
@@ -612,7 +643,7 @@ position: relative;
    background-size: cover;
      width: 100%;
    height: 100%;
-     
+     z-index: 200;
      cursor: pointer;
 
  }
@@ -631,9 +662,7 @@ position: relative;
 
 
 
- .coffe1:hover{
-  transform: scale(1.1);
- }
+ 
 
  .coffe2{
   border-radius: 1rem;
@@ -649,10 +678,7 @@ padding-left:0.5rem ;
 
  }
 
- .coffe2:hover{
-  transform: scale(1.1);
- }
-  
+ 
 
 
 
@@ -671,12 +697,6 @@ padding-left:0.5rem ;
  }
  
  
-
-.coffe3:hover{
-  transform: scale(1.1);
- }
-
-
 
 
 
@@ -700,9 +720,7 @@ padding-left:0.5rem ;
  
  
 
-.coffe4:hover{
-  transform: scale(1.1);
- }
+
 
 
 
@@ -728,9 +746,6 @@ padding-left:0.5rem ;
 
 
 
-.coffe5:hover{
-  transform: scale(1.1);
- }
   
 
 .coffe6{
@@ -748,10 +763,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe6:hover{
-  transform: scale(1.1);
- }  
-
 
 .coffe7{
    
@@ -769,10 +780,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe7:hover{
-  transform: scale(1.1);
- }
-
 
 .coffe8{
    
@@ -789,9 +796,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe8:hover{
-  transform: scale(1.1);
- }
   
 
 
@@ -811,9 +815,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe9:hover{
-  transform: scale(1.1);
- }
 
 
 .coffe10{
@@ -832,10 +833,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe10:hover{
-  transform: scale(1.1);
- }
-
 .coffe11{
    
       padding-left:0.5rem ;
@@ -852,9 +849,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe11:hover{
-  transform: scale(1.1);
- }
 
 
 
@@ -874,9 +868,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe12:hover{
-  transform: scale(1.1);
- }
 
 .coffe13{
    
@@ -893,7 +884,7 @@ padding-left:0.5rem ;
      cursor: pointer;
 
  }
- 
+
  .Turkish-text{
  position: absolute;
  left: 3px;
@@ -905,10 +896,6 @@ padding-left:0.5rem ;
   color:#6f4811;
 
 }
-
-.coffe13:hover{
-  transform: scale(1.1);
- }
 
 
 .coffe14{
@@ -927,9 +914,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe14:hover{
-  transform: scale(1.1);
- }
 
 .coffe15{
    
@@ -947,25 +931,6 @@ padding-left:0.5rem ;
 
  }
  
- .coffe15:hover{
-  transform: scale(1.1);
- }
- @keyframes slide{
-   
-0%{
-
-  transform: translateX(0);
-  
-}
-100%{
-  transform: translateX(-50%);
-  
-}
-
- }
-  
-
-
 
  .most-popular{
   position: relative;
@@ -1055,6 +1020,32 @@ width: clamp(4rem,51vw,15rem);
 }
 
 
+
+
+
+
+
+
+.Popular-container .fa-regular.fa-heart{
+
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  z-index: 999999;
+}
+
+.Popular-container .fa-solid.fa-heart{
+
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  z-index: 999999;
+}
+
+
+
+
+
 .Popular-container p{
 
 position: absolute;
@@ -1076,7 +1067,7 @@ width: 100%;
   background-image:url(Images/Afogado.jpg) ;
   background-position: center;
   background-size: cover;
-  
+  z-index: 34;
 }
 
 
@@ -1695,6 +1686,8 @@ background-repeat: no-repeat;
 }
 
 
+
+
 .comments-container2{
 
 
@@ -1782,7 +1775,7 @@ border-radius: 1.5rem;
 footer{
     display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center !important;
   width:96%;
   height: clamp(2.5rem,5vh,3.3rem);
   position: fixed;
@@ -1794,11 +1787,12 @@ z-index: 10000000;
   background-color:#6f4811;
   align-self: center;
 }
+
 footer a i{
+
   color: white;
 }
  
-
 
 
 /* Latte Style-------------------------------------------------------------------------*/
@@ -1806,6 +1800,7 @@ footer a i{
 
 
 .Latte-body{
+  position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -2948,3 +2943,7 @@ border-radius: 1.5rem;
 z-index: 20;
 
 }
+
+
+
+

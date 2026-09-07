@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoffeeShop Carousel - Learning Guide</title>
+<style>
+@page { size: A4; margin: 16mm 15mm 18mm; }
+:root { --espresso:#2d211b; --coffee:#684632; --caramel:#b87945; --cream:#fbf5ec; --paper:#fffdf9; --muted:#76675d; --line:#eadacc; --mint:#dcebe4; --rose:#f6e2d7; }
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; }
+body { background:var(--cream); color:var(--espresso); font-family: Georgia, 'Times New Roman', serif; line-height:1.48; font-size:10.6pt; }
+.page { page-break-after:always; min-height:255mm; position:relative; }
+.page:last-child { page-break-after:auto; }
+h1,h2,h3,h4 { font-family: 'Trebuchet MS', Arial, sans-serif; line-height:1.12; margin:0 0 .45em; letter-spacing:.01em; }
+h1 { font-size:31pt; color:var(--espresso); }
+h2 { font-size:22pt; color:var(--coffee); border-bottom:2px solid var(--caramel); padding-bottom:7px; }
+h3 { font-size:14pt; color:var(--coffee); margin-top:16px; }
+h4 { font-size:11pt; color:var(--caramel); text-transform:uppercase; letter-spacing:.08em; }
+p { margin:0 0 9px; }
+ul,ol { margin-top:5px; padding-left:22px; }
+li { margin:4px 0; }
+.cover { display:flex; flex-direction:column; justify-content:space-between; padding:20mm 11mm 15mm; background:linear-gradient(145deg,#fffaf2 0%,#f2dfca 58%,#d2aa83 100%); border:1px solid #e7ccb1; }
+.eyebrow { color:var(--caramel); font:700 10pt 'Trebuchet MS',Arial,sans-serif; letter-spacing:.17em; text-transform:uppercase; }
+.subtitle { font:16pt 'Trebuchet MS',Arial,sans-serif; color:var(--coffee); max-width:470px; }
+.cup { font-size:30pt; letter-spacing:4px; color:var(--coffee); white-space:normal; overflow-wrap:anywhere; margin:25px 0; }
+.cover-card { background:rgba(255,253,249,.75); border-left:5px solid var(--caramel); padding:17px 20px; max-width:500px; }
+.meta { font:10pt 'Trebuchet MS',Arial,sans-serif; color:var(--muted); }
+.chapter { display:flex; flex-direction:column; justify-content:center; background:var(--espresso); color:#fffaf2; padding:22mm; }
+.chapter h2 { color:#f4c89d; border-color:#b87945; font-size:29pt; }
+.chapter p { max-width:520px; font-size:13pt; color:#eadacc; }
+.kicker { color:#f4c89d; font:700 10pt 'Trebuchet MS',Arial,sans-serif; text-transform:uppercase; letter-spacing:.14em; }
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom:17px; padding-bottom:8px; border-bottom:1px solid var(--line); font:8pt 'Trebuchet MS',Arial,sans-serif; color:var(--muted); }
+.footer { position:absolute; bottom:0; left:0; right:0; border-top:1px solid var(--line); padding-top:6px; color:var(--muted); font:8pt 'Trebuchet MS',Arial,sans-serif; display:flex; justify-content:space-between; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+.grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.box { background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:10px 0; }
+.box.important { background:var(--rose); border-left:5px solid var(--caramel); }
+.box.think { background:var(--mint); border-left:5px solid #739b88; }
+.box.mistake { background:#fff0dc; border-left:5px solid #d78a3b; }
+.box strong, .label { font-family:'Trebuchet MS',Arial,sans-serif; }
+code { font:9pt Consolas,'Courier New',monospace; background:#f1e8df; padding:1px 4px; border-radius:3px; }
+pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#241b17; color:#f7eadb; border-radius:7px; padding:12px 14px; font:8.6pt/1.45 Consolas,'Courier New',monospace; margin:9px 0 12px; }
+pre .key { color:#f4c89d; } pre .fn { color:#b8ddc8; } pre .str { color:#f3c98c; } pre .cm { color:#a9998c; }
+.table { width:100%; border-collapse:collapse; margin:9px 0 12px; background:var(--paper); font-size:9.1pt; }
+.table th { background:var(--coffee); color:white; font-family:'Trebuchet MS',Arial,sans-serif; text-align:left; }
+.table th,.table td { border:1px solid var(--line); padding:7px 8px; vertical-align:top; }
+.table tr:nth-child(even) td { background:#fff9f1; }
+.diagram { background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:13px; margin:10px 0; font:10pt Consolas,'Courier New',monospace; white-space:pre-wrap; text-align:center; color:var(--coffee); }
+.flow { display:flex; flex-direction:column; align-items:center; gap:5px; margin:12px auto; max-width:390px; }
+.flow div { width:100%; text-align:center; padding:8px 10px; border:1px solid #cda67e; background:#fff9f1; border-radius:7px; font-family:'Trebuchet MS',Arial,sans-serif; }
+.flow b { color:var(--caramel); font-size:16pt; }
+.two-col-code { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.small { font-size:9pt; color:var(--muted); }
+.toc li { margin:7px 0; font-family:'Trebuchet MS',Arial,sans-serif; }
+.badge { display:inline-block; padding:4px 8px; border-radius:20px; background:#ead0b7; color:var(--coffee); font:700 8pt 'Trebuchet MS',Arial,sans-serif; }
+.exercise { min-height:40px; border-bottom:1px dashed var(--line); margin:9px 0; padding-bottom:8px; }
+@media print { a { color:inherit; text-decoration:none; } .no-print { display:none; } }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div><div class="eyebrow">CoffeeShop project / learning guide</div><div style="height:28mm"></div><h1>Building an Infinite Moving Carousel with Free Scrolling</h1><p class="subtitle">How My CoffeeShop Carousel Works - From Beginner to Builder</p><div class="cup">☕ ☕ ☕ ☕ ☕ → ☕ ☕ ☕ ☕ ☕</div><div class="cover-card"><strong>The promise of this guide</strong><p>By the end, you should be able to rebuild this kind of carousel yourself. We will focus on the reasons behind each decision, not just the lines of code.</p></div></div>
+  <div class="meta">Native scrolling • duplicated card sets • pause and resume • requestAnimationFrame<br>Prepared from the current CoffeeShop implementation</div>
+</section>
+
+<section class="page">
+<div class="header"><span>COFFEESHOP CAROUSEL</span><span>Contents</span></div>
+<h2>Table of Contents</h2>
+<ol class="toc">
+<li>The problem and the design decision</li><li>The duplicate-set trick</li><li>HTML and CSS structure</li><li>Variables and DOM selection</li><li>Finding the loop point with offsetLeft</li><li>Pause, resume, and user input</li><li>requestAnimationFrame and time-based movement</li><li>The complete flow</li><li>Build it yourself in stages</li><li>What if I remove this?</li><li>Common mistakes and debugging</li><li>Exercises and solutions</li><li>Final mental model and possible improvements</li>
+</ol>
+<div class="box important"><strong>Project note</strong><p>In the current project, the cards are written in <code>market-page.html</code>. The first 15 cards appear again immediately after them in the same <code>.coffee-menue</code> track. JavaScript does not generate the duplicate set; it measures and moves the existing DOM.</p></div>
+<h3>Files involved</h3>
+<table class="table"><tr><th>File</th><th>Job</th></tr><tr><td><code>market-page.html</code></td><td>Contains the one scroll container, one horizontal track, and the original plus duplicate card markup.</td></tr><tr><td><code>style.css</code></td><td>Makes the container scroll horizontally and the track wide, horizontal, and non-shrinking.</td></tr><tr><td><code>Market-Folder/Market.js</code></td><td>Moves <code>scrollLeft</code>, finds the loop point, pauses for interaction, and keeps heart/card behavior running.</td></tr><tr><td><code>Market-Folder/Market-Elements.js</code></td><td>Finds the menu hearts with <code>.MenueCoffee-Heart</code>; the footer heart is not selected.</td></tr></table>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>2</span></div>
+</section>
+
+<section class="page chapter"><div class="kicker">Chapter 1</div><h2>The problem we were trying to solve</h2><p>We wanted one coffee row to move by itself, remain normally scrollable, stop when a person takes control, restart after the interaction, and repeat forever without showing a blank patch.</p><p>The difficult part is that automatic movement and human movement both need to control the same horizontal position.</p><div class="box" style="max-width:520px;color:var(--espresso)"><strong>Core decision</strong><p>Use the browser's real scroll position, <code>scrollLeft</code>, as the single source of movement. Do not move the carousel with a CSS transform.</p></div></section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 1</span><span>Why scrollLeft?</span></div>
+<h2>Transform movement vs real scrolling</h2>
+<div class="grid2"><div class="box"><h3>Transform</h3><div class="diagram">[☕ ☕ ☕ ☕ ☕]
+       ← moved visually</div><p><code>transform: translateX(...)</code> changes where an element is painted. The scroll box does not think its scroll position changed.</p><p>If a user tries to scroll at the same time, two systems can fight: CSS moves the track while the browser is trying to move the scroll position.</p></div><div class="box"><h3>scrollLeft</h3><div class="diagram">[☕ ☕ ☕ ☕ ☕]
+       ↑
+ actual scroll position</div><p><code>container.scrollLeft</code> changes the native horizontal position of the scroll box.</p><p>That is the same position the user controls with a mouse, trackpad, scrollbar, or finger. One control path is easier to pause and resume.</p></div></div>
+<div class="box important"><strong>Why the old percentage was fragile</strong><p><code>translateX(-50%)</code> is a visual percentage. It does not know the exact width of one coffee set, including responsive card widths and the 20px gap. A transform can therefore expose empty space or reset at the wrong visual moment.</p></div>
+<h3>Design rule</h3><p>Let native scrolling do the movement. Make two identical sets. When the second set begins, subtract the measured width of one complete set.</p>
+</section>
+
+<section class="page chapter"><div class="kicker">Chapter 2</div><h2>The duplicate-set trick</h2><p>An infinite carousel is not truly infinite. It is two identical sets pretending to be one long conveyor belt.</p><div class="diagram" style="color:#fffaf2;background:#3b2a21;border-color:#b87945">ORIGINAL
+A  B  C  D  E
+
+DUPLICATED TRACK
+A  B  C  D  E  |  A  B  C  D  E
+                  second set starts here
+
+When the scroll reaches the bar:
+position = position - width of one set</div><p>After the subtraction, the viewer sees the same card position in the first set. Because the cards on both sides are identical, the jump is hidden.</p></section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 3</span><span>HTML and CSS</span></div>
+<h2>Understand the structure</h2>
+<div class="flow"><div><strong>.CoffeeMenue-Container</strong><br>the window and native scroll box</div><b>↓</b><div><strong>.coffee-menue</strong><br>one wide horizontal track</div><b>↓</b><div><strong>.coffe-container</strong><br>one coffee card, repeated twice</div></div>
+<pre>&lt;div class="CoffeeMenue-Container"&gt;
+  &lt;div class="coffee-menue"&gt;
+    &lt;div class="coffe-container"&gt;...&lt;/div&gt;
+    &lt;!-- the first 15 cards repeat here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<table class="table"><tr><th>Rule</th><th>Reason</th></tr><tr><td><code>overflow-x: auto</code></td><td>Keep real horizontal scrolling available. The browser can provide mouse, trackpad, scrollbar, and touch scrolling.</td></tr><tr><td><code>display: flex</code></td><td>Put cards in one row.</td></tr><tr><td><code>width: max-content</code></td><td>Let the track be as wide as its cards require instead of forcing it into the viewport.</td></tr><tr><td><code>flex-shrink: 0</code></td><td>Prevent cards or the track from shrinking and changing the measured loop distance.</td></tr><tr><td><code>scrollbar-width: none</code></td><td>In this project, the visible scrollbar is hidden while native scrolling still works.</td></tr></table>
+<div class="box mistake"><strong>Common mistake</strong><p><code>overflow-x: hidden</code> would hide the very native scrolling this design depends on.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>5</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 4</span><span>DOM and state</span></div>
+<h2>Variables: the small control room</h2>
+<table class="table"><tr><th>Variable</th><th>Stores</th><th>Why it exists / analogy</th></tr><tr><td><code>CoffeeMenueContainer</code></td><td>The outer scroll element</td><td>Where the browser keeps <code>scrollLeft</code>. It is the window you move.</td></tr><tr><td><code>CoffeeMenue</code></td><td>The inner track</td><td>The long conveyor belt holding every card.</td></tr><tr><td><code>CoffeeCards</code></td><td>All direct card children</td><td>The inventory list. We need positions of the first and duplicate sets.</td></tr><tr><td><code>CoffeeSetSize</code></td><td>Half the card count</td><td>How many cards belong to one set. With 30 cards, it is 15.</td></tr><tr><td><code>CoffeeMenuePaused</code></td><td>A boolean</td><td>The STOP button: <code>true</code> means automatic movement waits.</td></tr><tr><td><code>CoffeeMenueResumeTimer</code></td><td>A timeout handle</td><td>An alarm scheduled to turn movement back on.</td></tr><tr><td><code>CoffeeMenueLastTime</code></td><td>The previous frame timestamp</td><td>The last clock reading, used to measure elapsed time.</td></tr><tr><td><code>CoffeeMenueWritingScroll</code></td><td>A boolean guard</td><td>A sign saying “JavaScript caused this scroll; do not call it user input.”</td></tr></table>
+<h3>Selecting the elements</h3>
+<pre>const CoffeeMenueContainer = document.querySelector(".CoffeeMenue-Container");
+const CoffeeMenue = document.querySelector(".coffee-menue");
+const CoffeeCards = CoffeeMenue.querySelectorAll(":scope &gt; .coffe-container");</pre>
+<p><code>querySelector</code> returns the first matching element. <code>querySelectorAll</code> returns all matches. The selector <code>:scope &gt;</code> means “direct children of this exact track.” It avoids accidentally selecting cards buried inside some other nested element.</p>
+<div class="box think"><strong>Think about it</strong><p>The footer heart has the Font Awesome class <code>fa-regular fa-heart</code>, but it is outside this track and does not have <code>MenueCoffee-Heart</code>. The menu selector therefore leaves the footer alone.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>6</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 5</span><span>The measured loop</span></div>
+<h2>Why divide by two?</h2>
+<p>The current track has two matching sets:</p><div class="diagram">FIRST SET:   1  2  3  4  5  ...  15
+SECOND SET:  1  2  3  4  5  ...  15
+
+30 cards / 2 = 15 cards per set</div>
+<pre>const CoffeeSetSize = CoffeeCards.length / 2;</pre>
+<p>This works only when the track contains exactly two identical sets. If one card is missing from the duplicate, or an extra card is inserted into only one side, the halfway index no longer points to the equivalent card.</p>
+<h2>What is offsetLeft?</h2>
+<p><strong>Technical word:</strong> <code>offsetLeft</code>. In simple words, it is the element's left position relative to its offset parent. In this layout, the cards share the track as their positioning context, so comparing two card positions gives the distance between them.</p>
+<div class="diagram">track start = 0px
+│
+├── first card: offsetLeft 0px
+│       gap + card width + gap ...
+└── first duplicate: offsetLeft 4,320px
+
+loopPoint = 4,320 - 0 = 4,320px</div>
+<pre>function GetCoffeeLoopPoint(){
+  return CoffeeCards[CoffeeSetSize].offsetLeft
+       - CoffeeCards[0].offsetLeft;
+}</pre>
+<div class="box important"><strong>Why not hard-code 500 or 50%?</strong><p>Cards use responsive <code>clamp()</code> widths and the track uses a gap. The actual distance changes with viewport size. Measuring the rendered positions lets the browser tell us the truth.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>7</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 6</span><span>Pause and resume</span></div>
+<h2>Interaction is a hand-off</h2>
+<p>The automatic carousel and the user should not steer at the same time. The pause flag is a traffic light.</p>
+<div class="diagram">GREEN: CoffeeMenuePaused = false  → automatic movement allowed
+RED:   CoffeeMenuePaused = true   → automatic movement waits</div>
+<pre>function PauseCoffeeMenue(){
+  CoffeeMenuePaused = true;
+  clearTimeout(CoffeeMenueResumeTimer);
+}
+
+function ResumeCoffeeMenue(){
+  clearTimeout(CoffeeMenueResumeTimer);
+  CoffeeMenueResumeTimer = setTimeout(() =&gt; {
+    CoffeeMenuePaused = false;
+  }, 1200);
+}</pre>
+<p>Calling <code>clearTimeout</code> first is important. Scroll events can arrive many times. Clearing the old timer means we keep one clean “resume later” plan rather than letting several old timers wake the carousel unpredictably.</p>
+<div class="diagram">USER SCROLLS → PAUSE → USER STOPS → wait 1.2 seconds → RESUME</div>
+<div class="box think"><strong>Why not resume immediately?</strong><p>A touch release or pointer release does not always mean the user has finished momentum scrolling. The short delay gives the interaction room to settle.</p></div>
+<h3>What does “debounce” mean?</h3><p>Debouncing means waiting until activity has stopped for a chosen amount of time. Each new interaction clears the old timer and starts the waiting period again.</p>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>8</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 7</span><span>The event and flag system</span></div>
+<h2>HandleCoffeeMenueScroll()</h2>
+<pre>function HandleCoffeeMenueScroll(){
+  if(CoffeeMenueWritingScroll)return;
+
+  PauseCoffeeMenue();
+  ResumeCoffeeMenue();
+
+  const loopPoint = GetCoffeeLoopPoint();
+  if(CoffeeMenueContainer.scrollLeft &gt;= loopPoint){
+    CoffeeMenueContainer.scrollLeft -= loopPoint;
+  }
+}</pre>
+<table class="table"><tr><th>Step</th><th>Reason</th></tr><tr><td>Ignore guarded events</td><td>Do not mistake JavaScript's own movement for a human scroll.</td></tr><tr><td>Pause</td><td>Give the user control as soon as native scrolling is reported.</td></tr><tr><td>Schedule resume</td><td>Restart only after 1.2 seconds of quiet.</td></tr><tr><td>Read the loop point</td><td>Use the current responsive layout.</td></tr><tr><td>Subtract one set</td><td>Move from the duplicate set to the equivalent first-set position.</td></tr></table>
+<h2>Why the writing flag exists</h2>
+<div class="diagram">JavaScript changes scrollLeft
+          ↓
+Browser fires scroll event
+          ↓
+Handler might think the USER scrolled
+          ↓
+Wrong pause/reset logic
+
+Writing flag = a temporary “this was automatic” label</div>
+<p>During automatic movement, the code sets <code>CoffeeMenueWritingScroll = true</code>. The scroll handler sees it and returns. On the next animation frame, the flag returns to <code>false</code>.</p>
+<div class="box mistake"><strong>Possible improvement</strong><p>The exact flag timing is subtle: browser scroll events may be delivered on a different schedule. A production version could use a more explicit internal-scroll guard around the write and reset it after the related scroll event, or compare the latest input event. The current flag teaches the right idea: separate programmatic movement from user movement.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>9</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 8</span><span>Frames and time</span></div>
+<h2>requestAnimationFrame</h2>
+<pre>requestAnimationFrame(MoveCoffeeMenue);</pre>
+<p>This asks the browser to call the function before a future repaint. The function moves a little, then schedules itself again:</p>
+<div class="diagram">Frame 1 → Frame 2 → Frame 3 → Frame 4 → ...</div>
+<p>It is a good fit for visual movement because the browser coordinates the callback with painting. It does not promise a perfect 60 FPS; the timing can change when the tab is hidden, the device is busy, or the display has another refresh rate.</p>
+<h2>Why performance.now() matters</h2>
+<pre>const elapsedTime = currentTime - CoffeeMenueLastTime;
+CoffeeMenueLastTime = currentTime;</pre>
+<div class="diagram">Frame A: time = 1000ms
+Frame B: time = 1016ms
+elapsedTime = 16ms</div>
+<p>If every frame moved a fixed amount, a slow frame could make the carousel move too slowly or too quickly. Time-based movement says: “move according to how much time passed.”</p>
+<h2>Speed control</h2>
+<pre>CoffeeMenueContainer.scrollLeft += elapsedTime * 0.025;</pre>
+<p><code>elapsedTime × 0.025</code> is the number of pixels to add for that frame. Roughly: <code>0.01</code> is slower, <code>0.025</code> is the current speed, and <code>0.05</code> is faster. These are JavaScript movement factors, not CSS duration units.</p>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>10</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 9</span><span>Events</span></div>
+<h2>Which event means what?</h2>
+<table class="table"><tr><th>Event</th><th>Meaning</th><th>Role here</th></tr><tr><td><code>scroll</code></td><td>The scroll position changed.</td><td>Pause, debounce resume, and check the loop boundary.</td></tr><tr><td><code>wheel</code></td><td>Mouse wheel or trackpad input.</td><td>Pause automatic movement while the user steers.</td></tr><tr><td><code>touchstart</code></td><td>A finger touched the area.</td><td>Pause immediately.</td></tr><tr><td><code>touchend</code></td><td>The finger left the area.</td><td>Schedule resume.</td></tr><tr><td><code>pointerdown</code></td><td>A pointer pressed down.</td><td>Pause mouse, pen, or compatible touch interaction.</td></tr><tr><td><code>pointerup</code></td><td>The pointer was released.</td><td>Schedule resume.</td></tr><tr><td><code>pointercancel</code></td><td>The browser cancelled the pointer interaction.</td><td>Do not leave the carousel stuck in a paused state.</td></tr></table>
+<p>Some events overlap. That is useful because different devices report interaction differently. The scroll handler remains the place that notices the actual position change.</p>
+<h3>Why passive listeners?</h3>
+<pre>addEventListener("scroll", HandleCoffeeMenueScroll, { passive: true });</pre>
+<p><code>passive: true</code> tells the browser that this listener will not call <code>preventDefault()</code> to cancel the native action. That is commonly appropriate for scroll/touch observation. It does not magically guarantee faster scrolling; it simply gives the browser a clear constraint.</p>
+<div class="box important"><strong>Card behavior stays intact</strong><p>The card's inline navigation handlers are unchanged. Menu hearts still use <code>stopPropagation()</code> and <code>preventDefault()</code>, so clicking a heart does not navigate to the coffee page. The carousel code does not replace those handlers.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>11</span></div>
+</section>
+
+<section class="page chapter"><div class="kicker">Chapter 10</div><h2>The complete flow</h2><div class="flow"><div>PAGE LOAD<br>Find the container, track, and cards</div><b>↓</b><div>30 cards ÷ 2<br>Find 15 cards per set</div><b>↓</b><div>Measure first card of set 2<br>Find the responsive loop point</div><b>↓</b><div>requestAnimationFrame()<br>Read elapsed time</div><b>↓</b><div>Move scrollLeft</div><b>↓</b><div>Reached loop point?<br>YES: subtract one set<br>NO: continue</div><b>↓</b><div>User interacting?<br>YES: pause and debounce resume<br>NO: keep moving</div></div></section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 11</span><span>Build it yourself</span></div>
+<h2>Build it from zero</h2>
+<div class="grid2"><div class="box"><span class="badge">Stage 1</span><h3>Make a scroll window</h3><pre>.CoffeeMenue-Container {
+  overflow-x: auto;
+}</pre><p>First prove the browser can scroll.</p></div><div class="box"><span class="badge">Stage 2</span><h3>Add one row</h3><pre>.coffee-menue {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+}</pre><p>Cards now stay in one wide line.</p></div><div class="box"><span class="badge">Stage 3</span><h3>Duplicate the set</h3><pre>A B C D E A B C D E</pre><p>Copy the exact order and design.</p></div><div class="box"><span class="badge">Stage 4</span><h3>Read the DOM</h3><pre>const cards = track.querySelectorAll(
+  ":scope &gt; .card"
+);</pre><p>Count direct card children.</p></div></div>
+<h3>Stages 5-7: measure, move, reset</h3>
+<pre>const setSize = cards.length / 2;
+const loopPoint = cards[setSize].offsetLeft - cards[0].offsetLeft;
+container.scrollLeft += 1;
+if (container.scrollLeft &gt;= loopPoint) {
+  container.scrollLeft -= loopPoint;
+}</pre>
+<p>Do not guess the loop distance. Measure it from the rendered cards.</p>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>13</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 11</span><span>Build it yourself</span></div>
+<h2>Stages 8-10: control the loop</h2>
+<pre><span class="cm">// Stage 8: pause state</span>
+let paused = false;
+function pause(){ paused = true; }
+
+<span class="cm">// Stage 9: debounce resume</span>
+let timer;
+function resumeLater(){
+  clearTimeout(timer);
+  timer = setTimeout(() =&gt; paused = false, 1200);
+}
+
+<span class="cm">// Stage 10: frame loop</span>
+function move(){
+  if (!paused) container.scrollLeft += 1;
+  requestAnimationFrame(move);
+}
+requestAnimationFrame(move);</pre>
+<div class="box think"><strong>Build in layers</strong><p>Do not add every feature at once. First make native scrolling work. Then duplicate. Then measure. Then auto-move. Then pause/resume. After each stage, test one behavior.</p></div>
+<h3>A careful recreation checklist</h3><ol><li>Can you drag or wheel the container without JavaScript?</li><li>Do the two sets look identical?</li><li>Does the measured loop point land before the second set's end?</li><li>Does automatic movement stop when you touch or scroll?</li><li>Does the loop reset to the equivalent visual card?</li><li>Do hearts still stop card navigation?</li></ol>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>14</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 12</span><span>Remove a line and learn</span></div>
+<h2>What if I remove this?</h2>
+<table class="table"><tr><th>Removed line</th><th>Likely result</th><th>What it teaches</th></tr><tr><td><code>Paused = true</code></td><td>Autoplay keeps fighting the user's scroll.</td><td>Interaction needs ownership.</td></tr><tr><td><code>clearTimeout(timer)</code></td><td>Several old timers may resume at unexpected times.</td><td>Debounce means one current plan.</td></tr><tr><td><code>WritingScroll = true</code></td><td>Automatic movement may look like user input and pause itself.</td><td>Programmatic events can trigger browser events too.</td></tr><tr><td><code>requestAnimationFrame(move)</code></td><td>The function runs once, then stops.</td><td>A frame loop must schedule its next frame.</td></tr><tr><td><code>scrollLeft -= loopPoint</code></td><td>The carousel reaches the end of the duplicate and stops or shows the end.</td><td>The reset creates the illusion of infinity.</td></tr><tr><td><code>length / 2</code></td><td>The wrong card is used as the duplicate-set start.</td><td>The markup must contain exactly two matching sets.</td></tr></table>
+<div class="box important"><strong>Debugging lesson</strong><p>Removing a line temporarily is an experiment. Observe one behavior, write down what changed, then restore the line. That is more useful than memorizing code.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>15</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 13</span><span>Common mistakes</span></div>
+<h2>How carousel bugs usually happen</h2>
+<table class="table"><tr><th>Mistake</th><th>Symptom</th><th>Fix</th></tr><tr><td>Transform without duplicate content</td><td>Blank space or a hard stop.</td><td>Use two identical sets and native scroll position.</td></tr><tr><td>Hard-code <code>scrollLeft = 500</code></td><td>Works on one screen size only.</td><td>Measure the first duplicate card with <code>offsetLeft</code>.</td></tr><tr><td>Use a wrong loop distance</td><td>Jump happens too early or too late.</td><td>Confirm card count, order, gap, and set boundary.</td></tr><tr><td>Start several intervals/RAF loops</td><td>Movement becomes too fast or inconsistent.</td><td>Create one long-lived frame loop.</td></tr><tr><td>Forget to pause</td><td>Carousel fights touch or trackpad input.</td><td>Pause on interaction and debounce resume.</td></tr><tr><td>Ignore scroll events from JavaScript</td><td>Autoplay is mistaken for user scrolling.</td><td>Use a guarded internal-write state.</td></tr></table>
+<h2>Debug with DevTools</h2>
+<pre>console.log(CoffeeMenueContainer.scrollLeft);
+console.log(CoffeeMenueContainer.scrollWidth);
+console.log(CoffeeCards.length);
+console.log(GetCoffeeLoopPoint());</pre>
+<ul><li><code>scrollLeft</code>: current horizontal position.</li><li><code>scrollWidth</code>: total inside width, including content outside the window.</li><li><code>CoffeeCards.length</code>: should be 30 in this project.</li><li>Loop point: should equal the distance from the first card to card 16.</li></ul>
+<div class="box think"><strong>Inspect visually</strong><p>In Elements, select the outer container. Watch its scroll position while dragging. Select the track and confirm it is one row. Count the card elements directly under the track.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>16</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 14</span><span>Exercises</span></div>
+<h2>Try before reading the solutions</h2>
+<div class="exercise"><strong>1. Slow it down.</strong> Change the movement factor so the carousel moves more gently.</div><div class="exercise"><strong>2. Speed it up.</strong> Choose a larger factor and observe how it feels.</div><div class="exercise"><strong>3. Change the delay.</strong> Make resume wait 2 seconds instead of 1.2.</div><div class="exercise"><strong>4. Inspect the loop.</strong> Log <code>GetCoffeeLoopPoint()</code> and explain what it measures.</div><div class="exercise"><strong>5. Remove the reset temporarily.</strong> What happens after the second set?</div><div class="exercise"><strong>6. Make a tiny carousel.</strong> Build one with three cards and a duplicate set.</div><div class="exercise"><strong>7. Rebuild without looking.</strong> Write the structure, measurement, loop, and pause system from memory, then compare.</div>
+<h3>Hints</h3><p>For Exercise 1, change only the speed factor. For Exercise 3, change only <code>1200</code>. For Exercise 6, remember that the loop point is not “half the screen”; it is the distance between equivalent cards.</p>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>17</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 14</span><span>Solutions</span></div>
+<h2>Exercise solutions</h2>
+<ol><li><code>elapsedTime * 0.01</code> is slower than the current <code>0.025</code>.</li><li><code>elapsedTime * 0.05</code> is faster than the current factor.</li><li>Replace <code>1200</code> with <code>2000</code>. The unit is milliseconds.</li><li>Log the function result. It should match the rendered distance from card 1 to card 16, including card widths and gaps.</li><li>Without the reset, the scroll reaches the end of the duplicated content. There is no third set, so the illusion ends.</li><li>Use six cards total, <code>cards.length / 2</code> gives three, and measure <code>cards[3].offsetLeft - cards[0].offsetLeft</code>.</li><li>Build in the ten stages from this guide. Test each layer before adding the next.</li></ol>
+<div class="box mistake"><strong>Do not copy blindly</strong><p>The important skill is being able to explain why the set size, measured loop point, pause flag, timer, and frame loop all exist. If you can explain the failure caused by removing each one, you understand the architecture.</p></div>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>18</span></div>
+</section>
+
+<section class="page">
+<div class="header"><span>CHAPTER 15</span><span>Limits and improvements</span></div>
+<h2>Possible improvements</h2>
+<div class="box important"><strong>Possible Improvement: resize handling</strong><p>Card widths use responsive CSS. If the viewport changes while the carousel is running, the measured loop distance can change. Re-measuring on resize, and possibly normalizing <code>scrollLeft</code>, would make the behavior more robust.</p></div>
+<div class="box important"><strong>Possible Improvement: reduced motion</strong><p>Some users prefer less movement. A production carousel could check <code>prefers-reduced-motion</code> and disable autoplay while still allowing manual scrolling.</p></div>
+<div class="box important"><strong>Possible Improvement: structural duplication</strong><p>The current project manually writes the 15-card set twice. That preserves the existing card handlers, but it also means future card edits must be made twice. A data-driven renderer could generate both sets from one coffee list, provided it keeps heart and navigation behavior correct.</p></div>
+<div class="box important"><strong>Possible Improvement: interaction timing</strong><p>The provided code pauses on wheel, touch, and pointer input. The scroll handler also schedules resume. Testing on real trackpads and touch devices is important because momentum scrolling and event timing vary.</p></div>
+<h3>What must not change accidentally?</h3><ul><li>The one outer scroll container.</li><li>The one horizontal track containing original plus duplicate cards.</li><li>The menu heart class <code>MenueCoffee-Heart</code>.</li><li>The card navigation handlers and heart propagation prevention.</li></ul>
+<div class="footer"><span>CoffeeShop Carousel - Learning Guide</span><span>19</span></div>
+</section>
+
+<section class="page chapter"><div class="kicker">Final mental model</div><h2>Two rows pretending to be infinity</h2><p>The carousel is not really infinite. It is two identical rows pretending to be one infinite row.</p><div class="flow"><div><strong>scrollLeft</strong><br>moves the carousel</div><b>↓</b><div><strong>duplicate cards</strong><br>create the illusion of infinity</div><b>↓</b><div><strong>loopPoint</strong><br>knows where to reset</div><b>↓</b><div><strong>requestAnimationFrame</strong><br>creates repeated browser-timed movement</div><b>↓</b><div><strong>PauseCoffeeMenue</strong><br>gives control to the user</div><b>↓</b><div><strong>ResumeCoffeeMenue</strong><br>starts movement after quiet time</div><b>↓</b><div><strong>CoffeeMenueWritingScroll</strong><br>separates automatic scroll from user scroll</div></div><div class="box" style="max-width:520px;margin:20px auto;background:#fffaf2;color:var(--espresso)"><p><strong>If you remember one sentence:</strong></p><p>Move the real scroll position, measure the distance to the duplicate, and when you reach it, subtract one complete set so the same picture stays under the user's eyes.</p></div></section>
+
+</body>
+</html>
