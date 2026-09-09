@@ -4,6 +4,7 @@ export const Coffees = [
     id: 16,
     Name: "Espresso",
     Price: 3,
+    Image: "../Images/Espresso.jpg",
 
     option: {
 
@@ -43,6 +44,7 @@ export const Coffees = [
     id: 17,
     Name: "Americano",
     Price: 3.5,
+    Image: "../Images/Americano.jpg",
 
     option: {
 
@@ -84,6 +86,7 @@ export const Coffees = [
     id: 18,
     Name: "Latte",
     Price: 5,
+    Image: "../Images/Latte.jpg",
 
     option: {
 
@@ -125,6 +128,7 @@ export const Coffees = [
     id: 19,
     Name: "Flat-White",
     Price: 5.5,
+    Image: "../Images/Flat-white.jpg",
 
     option: {
 
@@ -164,6 +168,7 @@ export const Coffees = [
     id: 20,
     Name: "Cappuccino",
     Price: 5,
+    Image: "../Images/Cappuccino.jpg",
 
     option: {
 
@@ -203,6 +208,7 @@ export const Coffees = [
     id: 21,
     Name: "Machiato",
     Price: 4.5,
+    Image: "../Images/Macchiato.jpg",
 
     option: {
 
@@ -241,6 +247,7 @@ export const Coffees = [
     id: 22,
     Name: "Mocca",
     Price: 6,
+    Image: "../Images/Mocca.jpg",
 
     option: {
 
@@ -281,6 +288,7 @@ export const Coffees = [
     id: 23,
     Name: "Cortado",
     Price: 4,
+    Image: "../Images/Cortado.jpg",
 
     option: {
 
@@ -320,6 +328,7 @@ export const Coffees = [
     id: 24,
     Name: "Lungo",
     Price: 3.5,
+    Image: "../Images/Lungo.jpg",
 
     option: {
 
@@ -360,6 +369,7 @@ export const Coffees = [
     id: 25,
     Name: "Ristretto",
     Price: 3,
+    Image: "../Images/Restretto.jpg",
 
     option: {
 
@@ -398,6 +408,7 @@ export const Coffees = [
     id: 26,
     Name: "Cold-Brew",
     Price: 5.5,
+    Image: "../Images/Cold-brew.jpg",
 
     option: {
 
@@ -437,6 +448,7 @@ export const Coffees = [
     id: 27,
     Name: "Iced-Coffee",
     Price: 4,
+    Image: "../Images/Ice-coffe.jpg",
 
     option: {
 
@@ -477,6 +489,7 @@ export const Coffees = [
     id: 28,
     Name: "Galao",
     Price: 5,
+    Image: "../Images/Galao.jpg",
 
     option: {
 
@@ -516,6 +529,7 @@ export const Coffees = [
     id: 29,
     Name: "Viennese",
     Price: 5.5,
+    Image: "../Images/Viennese.jpg",
 
     option: {
 
@@ -555,6 +569,7 @@ export const Coffees = [
     id: 30,
     Name: "Afogado",
     Price: 6.5,
+    Image: "../Images/Afogado.jpg",
 
     option: {
 

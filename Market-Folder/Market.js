@@ -8,8 +8,23 @@ import { InitializeCoffeeMenue } from "./Ui/Coffee-Menue-Carousel.js";
 import { toggle_label,NavBar} from "./Market-Elements.js"; 
 import { NavAppear,NavDisappear } from "../Settings-Bar-Silde.js";
 
+import { RedHeart,TransparentHeart } from "./Ui/Like-effect.js";
+import { MenueCoffee_Heart } from "./Market-Elements.js";
+import { Search } from "./Input-Search-Display.js";
+import { CreateElement } from "./CretaeInput.js";
+import { Coffees } from "../OrderBuilder/Data/Coffee.js";
+import { SearchResult_Container, SearchForCoffee } from "./Market-Elements.js";
+import { URL_Transport } from "./Ui/URL-Handeling.js";
+import { Square } from "./Market-Elements.js";
+import { SelectLiked } from "./Ui/Select-Liked.js";
+import { DeseelectLiked } from "./Ui/Deselect-Liked.js";
+import { LikedCoffeesArray,GetLikedStorage } from "../Favorites-Folder/Data/Favorits-Data.js";
+
+
 
 window.addEventListener("load",()=>{
+
+  //these lines controll the animation of the search bar and the header(Line 26 to 35) 
  notification.classList.add("Scroll-Reverse");
  
               const ResultTitle=document.createElement("div");
@@ -21,22 +36,43 @@ window.addEventListener("load",()=>{
                SearchResult_Container.appendChild(ResultTitle);
 
 
+
+                           GetLikedStorage();
+                         
+  //these lines finds out if a coffee is liked to bring back  the Style of the heart at page load (Line 26 to 35) 
+
+              MenueCoffee_Heart.forEach(h=>{
+
+              let CoffeeContainer=h.closest(".coffe-container") || h.closest(".Popular-container");
+
+                 if(LikedCoffeesArray.includes(CoffeeContainer.dataset.name)){
+
+                         RedHeart(h);
+                         h.dataset.Clicked="true";
+                 }
+
+
+
+
+              });
+
+
+
+
 });
 
+
+
+
+
 export let ToggleClicked=false;
-
-
 
 window.addEventListener("scroll",()=>{
 
 HeaderScrollEffect();
 
 });
-import { Search } from "./Input-Search-Display.js";
-import { CreateElement } from "./CretaeInput.js";
-import { Coffees } from "../OrderBuilder/Data/Coffee.js";
-import { SearchResult_Container, SerachForCoffee } from "./Market-Elements.js";
-import { URL_Transport } from "./Ui/URL-Handeling.js";
+
  let InputsNameArray=[];
 
 InitializeCoffeeMenue();
@@ -44,16 +80,7 @@ InitializeCoffeeMenue();
 
 
 
-
-
-
-
-
-
-
-
-
-SerachForCoffee.addEventListener("input",()=>{
+SearchForCoffee.addEventListener("input",()=>{
     
          SearchResult_Container.style.opacity="1";
                   SearchResult_Container.style.pointerEvents="all";
@@ -67,7 +94,7 @@ SerachForCoffee.addEventListener("input",()=>{
 
  CreateElement(InputsNameArray,Coffees);
 
-if(SerachForCoffee.value==""){
+if(SearchForCoffee.value==""){
 
   SearchResult_Container.innerHTML="";
 
@@ -76,6 +103,8 @@ if(SerachForCoffee.value==""){
 
 
 
+
+});
 
 toggle_label.addEventListener("click",()=>{
 
@@ -88,14 +117,6 @@ toggle_label.addEventListener("click",()=>{
            ToggleClicked=!ToggleClicked;
 
   }
-
-});
-
-
-
-
-
-
 
 });
 
@@ -115,20 +136,13 @@ URL_Transport(InputsName.textContent);
 
 
 
-import { RedHeart,TransparentHeart } from "./Ui/Like-effect.js";
-import { MenueCoffee_Heart } from "./Market-Elements.js";
-
-
-
-
-
 
 MenueCoffee_Heart.forEach(heart=>{
 heart.dataset.Clicked=false; 
 
 heart.addEventListener("click",(e)=>{
   
-  
+
 e.stopPropagation();
 
 
@@ -140,22 +154,44 @@ if(heart.dataset.Clicked=="false"){
 RedHeart(heart);
 heart.dataset.Clicked="true";
 
+ SelectLiked(e);
+
 }
 
-       else if(heart.dataset.Clicked=="true"){
+
+
+
+
+
+   else if(heart.dataset.Clicked=="true"){
+
          
 
 TransparentHeart(heart);
 heart.dataset.Clicked="false";
 
+DeseelectLiked(e);
+
 }
 
 
 });
 
 
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

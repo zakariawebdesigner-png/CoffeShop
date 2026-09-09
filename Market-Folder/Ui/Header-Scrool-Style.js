@@ -1,6 +1,6 @@
 
 
-import { SerachForCoffee,SearchContainer,toggle_label,notification,BrandName,Header } from "../Market-Elements.js";
+import { SearchForCoffee,SearchContainer,toggle_label,notification,BrandName,Header } from "../Market-Elements.js";
 import {NavDisappear} from "../../Settings-Bar-Silde.js";
 import { ToggleClicked } from "../Market.js";
 
@@ -16,7 +16,7 @@ function HeaderScrollEffect(){
 
                 SearchContainer.classList.add("Scroll");
                      
-                SerachForCoffee.style.display="none";
+                SearchForCoffee.style.display="none";
 
                 toggle_label.style.color="White";
 
@@ -40,7 +40,7 @@ function HeaderScrollEffect(){
          else{
              Header.classList.remove("background");
                  SearchContainer.classList.remove("Scroll");
-                    SerachForCoffee.style.display="block";
+                    SearchForCoffee.style.display="block";
 
                 SearchContainer.classList.add("Scroll-Reverse");
 

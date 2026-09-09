@@ -2,7 +2,7 @@
 
 import { Coffees } from "../OrderBuilder/Data/Coffee.js";
 
-import { SerachForCoffee,SearchResult_Container,Square } from "./Market-Elements.js";
+import { SearchForCoffee,SearchResult_Container,Square } from "./Market-Elements.js";
 
 
 function Search(){
@@ -10,7 +10,7 @@ function Search(){
     let Name=[];
     Coffees.forEach(coff=>{
                  
-                   if(SerachForCoffee.value==""){
+                   if(SearchForCoffee.value==""){
                     
                              SearchResult_Container.style.opacity="0";
 
@@ -21,8 +21,8 @@ function Search(){
                 }
 
                       
-             if(coff.Name.toLowerCase().startsWith(SerachForCoffee.value.toLowerCase())){
-                console.log("letter:"+SerachForCoffee.value);
+             if(coff.Name.toLowerCase().startsWith(SearchForCoffee.value.toLowerCase())){
+                console.log("letter:"+SearchForCoffee.value);
                    console.log("Coffee:"+coff.Name);
 
                     Name.push(coff.Name);

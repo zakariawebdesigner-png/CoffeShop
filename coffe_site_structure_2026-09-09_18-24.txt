@@ -1,0 +1,417 @@
+Folder map of c:\Users\LENOVO\Desktop\Htmlcss\My-Projects\Coffe site
+==================================================
+
+├── .git/
+│   ├── hooks/
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── info/
+│   │   ├── exclude
+│   │   └── refs
+│   ├── logs/
+│   │   ├── refs/
+│   │   │   ├── heads/
+│   │   │   │   ├── agents/
+│   │   │   │   │   └── hi
+│   │   │   │   └── main
+│   │   │   └── remotes/
+│   │   │       └── origin/
+│   │   │           ├── HEAD
+│   │   │           └── main
+│   │   └── HEAD
+│   ├── objects/
+│   │   ├── 02/
+│   │   │   ├── 3a7a34ffc7acb80cab2252205a868961a66020
+│   │   │   └── ef8b28487bc0bd1f03947a197279a20b561e1d
+│   │   ├── 06/
+│   │   │   └── d1d57b445ee07469be6a27a729e82fabc2c36e
+│   │   ├── 0b/
+│   │   │   ├── 6c758eb1b8cb0e2383f8f992512e3d76bbf6e7
+│   │   │   └── f8dae54632a3e8cd722d544c1ac12965e970e9
+│   │   ├── 0e/
+│   │   │   └── 4486bb87a4eefc8fc1d05bcef36737a325ab87
+│   │   ├── 0f/
+│   │   │   └── 1d0f28e9772643df72263b49f2f81e5355a274
+│   │   ├── 10/
+│   │   │   ├── b5ce7088d313b5b71d43eb210ebaa251ac20d4
+│   │   │   └── e588b691c59e57b5681fabb2a43bea1948f405
+│   │   ├── 11/
+│   │   │   └── c828eafeff39e8f6e8fc26012dfbbacadda29b
+│   │   ├── 12/
+│   │   │   └── 6c1f9bb0e03ad6bdcf6ffde8443a4093fe2b12
+│   │   ├── 13/
+│   │   │   └── bf376045b664ba74a6927c0d9b4fee91987373
+│   │   ├── 14/
+│   │   │   └── e68c48569631c464e7d82a2fe2dc8649724ec3
+│   │   ├── 16/
+│   │   │   └── 6c5226d6196486f39503acbf6ae608a1566fb8
+│   │   ├── 18/
+│   │   │   └── 9b6425eef530e2dada04acaf0b16a766230f2d
+│   │   ├── 1b/
+│   │   │   └── d7e40dfe99c01baffc5ba1b8cd737e9aba06f1
+│   │   ├── 1c/
+│   │   │   └── 349fc86cd4d48b6b4b60774ce5e7f8a47279e8
+│   │   ├── 1d/
+│   │   │   └── 45105000092a390baf75e8856374c29bfe8d80
+│   │   ├── 1e/
+│   │   │   └── e8a4be95ba78db500f319b7954290f81ba1993
+│   │   ├── 1f/
+│   │   │   └── 5303c3fd1c4bf83c793494c821c3bc07677fb5
+│   │   ├── 21/
+│   │   │   └── d2c2250023053864ea629a901ee7b34ada14bc
+│   │   ├── 25/
+│   │   │   └── 241695df2e53a2f1cac37c29290dc601597854
+│   │   ├── 26/
+│   │   │   └── e947fa342beb7cbf6fcb0fdb11ed8efdbddb9b
+│   │   ├── 28/
+│   │   │   └── 35a0d06ba0e976ec6e7556b234e42f4213779c
+│   │   ├── 2a/
+│   │   │   └── 79ef9f08ca42ad9e497af61860db4cdde8083e
+│   │   ├── 2d/
+│   │   │   └── 518d19e14acdaa31453a1bdff3314ed18c0f45
+│   │   ├── 38/
+│   │   │   └── 1c51abb2e12cb65bc19a0eac82ca9298bb45a6
+│   │   ├── 39/
+│   │   │   └── 091c3a51b9f6af3c563571b5745be4e3d62e80
+│   │   ├── 3c/
+│   │   │   └── 5b4019518febd43cf514eb9e161e106f15f278
+│   │   ├── 3d/
+│   │   │   └── eedde968dff8390e50266176114449c3ae3fc4
+│   │   ├── 45/
+│   │   │   └── 038fdb66d7ef2aacb102c3b8410d3e36cb482a
+│   │   ├── 47/
+│   │   │   └── 919af24e9cef1c66b7d3ae43db01579dce013f
+│   │   ├── 4d/
+│   │   │   └── feef69951da2614e181d63afae5a6aa5e5cde7
+│   │   ├── 4f/
+│   │   │   └── 3b09deb25a6cbabfb3ca08af567f528ac8fc62
+│   │   ├── 52/
+│   │   │   ├── 1d8eee9aab419624e1fdbce7b882ada6178704
+│   │   │   └── db11f2078956c0918ffb1a40365b0f2b64e7b0
+│   │   ├── 53/
+│   │   │   └── 569b1f6536036ac0585c03dd4b3394d62784fd
+│   │   ├── 54/
+│   │   │   └── 6d9ae6bcee32e6d0232d5c3e3bb280d046c00c
+│   │   ├── 55/
+│   │   │   ├── 040d8531a83cc68bcabf2581d20e927d51897d
+│   │   │   └── c6b7ee7447b902bec99907f7c5f8a0ad1ccdd0
+│   │   ├── 56/
+│   │   │   └── 7dc7e62d6d76f1772fefe6ee62468e8ba616db
+│   │   ├── 57/
+│   │   │   └── 9dc76638ac31e3fc6b2c948d5369495ae0a81f
+│   │   ├── 58/
+│   │   │   └── 81c6fbd62927878ec1242b3d06ebb7b9958ddd
+│   │   ├── 59/
+│   │   │   └── 85507f72789d25ba805861967fd8f707424698
+│   │   ├── 5a/
+│   │   │   ├── 43d996536bb80d030b23191fbd641c0a1eb3e4
+│   │   │   └── 6605059e480e5047419f88b545b4803655496a
+│   │   ├── 5b/
+│   │   │   └── 2198b868ded60a2f97e35d5c5aa4179184e851
+│   │   ├── 5d/
+│   │   │   └── 2d5d630da2f4ca77047feb5fd1bff74bfb3554
+│   │   ├── 63/
+│   │   │   └── 1b4477e33cefa9d57d193bb4eae1ba12171633
+│   │   ├── 65/
+│   │   │   └── 3d5999f839606523a03c052b3030ccf7f373de
+│   │   ├── 68/
+│   │   │   └── 81af13a251288ae9b994f70e1259903564d7f1
+│   │   ├── 71/
+│   │   │   └── b14cbab29c289ce14486bb39db7a6748e71de9
+│   │   ├── 72/
+│   │   │   ├── 4388e018b5de9052bc9c083c04213df5ceb17d
+│   │   │   └── 7753b59e7bf125dc457379e4f387b263a9c5d4
+│   │   ├── 75/
+│   │   │   └── 71615ac9d9ffdcbbe1e8c873c8316e38c2df61
+│   │   ├── 76/
+│   │   │   ├── 450d130e1efbc41a09880ff33d26b0d4bb7d2b
+│   │   │   └── e6d3f27c8e0012dddfca63c665afe233771416
+│   │   ├── 78/
+│   │   │   └── 2faa572e516fc2ff582f8ff349881b714674d8
+│   │   ├── 79/
+│   │   │   └── a930fac9b1cb9a616c95f0dbfd820d3a6c7be8
+│   │   ├── 7d/
+│   │   │   └── 06c9428b9e54a453ab12eac3f0844ba556205a
+│   │   ├── 81/
+│   │   │   └── 9fc875fe3b310fa6441b2bded2bd6f4b10f124
+│   │   ├── 82/
+│   │   │   └── 5c5a23dcb34c26fce72f497bf95eb62a4af284
+│   │   ├── 84/
+│   │   │   └── 95c6d8d859fab5c35b6d32e34cd7fc6e0598ca
+│   │   ├── 86/
+│   │   │   └── 1dfcf0cab9dc59ccaac8a6a927b728c211fd4d
+│   │   ├── 8a/
+│   │   │   └── 12c0d7d7a32861da5989296c14f432882acfb8
+│   │   ├── 8e/
+│   │   │   └── f96af5214f54ad89bee4b8cf2b37ab8502b5a6
+│   │   ├── 9a/
+│   │   │   └── 73e4e111c133b381f3dee7d22c8c33c2b2988d
+│   │   ├── 9e/
+│   │   │   └── 4b07041665cb0055dec0a99358baee2a000a0b
+│   │   ├── a7/
+│   │   │   └── bf16d9b8ca8671a8f9fc340c1b44a8e0467053
+│   │   ├── b8/
+│   │   │   └── 395c3ef5f304732bb9e2a51cac87cbaa96005e
+│   │   ├── b9/
+│   │   │   └── 202a7b4b2ce644b2f3c13323dff67eb7772c45
+│   │   ├── bd/
+│   │   │   └── 3217b0d44608f782f13077b6b5a0eb929a8cde
+│   │   ├── bf/
+│   │   │   └── ce48b6754735113623c365305f8ac71939695f
+│   │   ├── c3/
+│   │   │   └── 52a5682132ad90b3416900b532a4004a106079
+│   │   ├── c4/
+│   │   │   └── c51a10dac5512888401820c8158547901d0220
+│   │   ├── c5/
+│   │   │   └── 15b4f301941152e000555a393131c442c5f0b5
+│   │   ├── c6/
+│   │   │   └── 72266410e0d5e69d215417cf3f31f864188d82
+│   │   ├── ca/
+│   │   │   └── f9ec24fb0545ede390a8cb3173fe042240ef75
+│   │   ├── ce/
+│   │   │   └── 877457e7b81d3a36df988c42574815fbe0a680
+│   │   ├── cf/
+│   │   │   └── 2d8daabdc382c2730923162fb9de8eb9a02cc3
+│   │   ├── d0/
+│   │   │   └── 78a368d7c499dee23d520d37a87b895da60fbc
+│   │   ├── d4/
+│   │   │   └── eba7d8045b131cf150c3bc6cd85d5f9009ba84
+│   │   ├── d5/
+│   │   │   ├── 82e5abaa08ae3cc7daf47035b16c61916d3524
+│   │   │   └── a393e56da8818793cf124d32bd0fa168fd5fa1
+│   │   ├── d9/
+│   │   │   └── abc86ead59876c9138e8b389b977ce17606f9f
+│   │   ├── de/
+│   │   │   ├── 2d50840fc4a6655355fa97e9955d9c579ea569
+│   │   │   └── f1f6523d34d296375f6a484a18354e909992cf
+│   │   ├── e1/
+│   │   │   ├── 2925a0f5232a469722f5739b69f0ee931f22ea
+│   │   │   └── 7f2ef885d833883408f3272d9051652deacb4b
+│   │   ├── e3/
+│   │   │   └── 2a30003f495ac03b42f6750390d699992f428b
+│   │   ├── e7/
+│   │   │   └── 3f494ee03976ac0aa3f419e6cae9b13440b11e
+│   │   ├── e9/
+│   │   │   └── 8543b90e73c068c69c75f899ebc1f7ba95f692
+│   │   ├── ea/
+│   │   │   └── 04cb252d4c5f1f65bb5ca5b1c9f649dd2b0263
+│   │   ├── eb/
+│   │   │   ├── 65c918b5be0f4ad35967c9aad2cc1b22ebe99d
+│   │   │   └── ee969aee75c05a9fc9c58458450e2bf4164e58
+│   │   ├── ec/
+│   │   │   └── e56f3615ddef8776ff86090e780fbf6369fd95
+│   │   ├── ed/
+│   │   │   └── 00b967625dc5d2afce6c69c259b1ce0bc5ab70
+│   │   ├── ef/
+│   │   │   └── 1aed2495263b5f9a665ebbce7575f644f0cfad
+│   │   ├── f4/
+│   │   │   ├── d9338921843f814f4b292c616e31bd14624b92
+│   │   │   └── e244184ba1eabf36b36ef4bb79a7c619dd9403
+│   │   ├── f8/
+│   │   │   └── 4fef2729a2be152ebba5bae3077f949ec06e91
+│   │   ├── f9/
+│   │   │   └── 36ff0dd48bcbd131382b591a9a60f26820b7f2
+│   │   ├── info/
+│   │   │   └── packs
+│   │   └── pack/
+│   │       ├── multi-pack-index
+│   │       ├── pack-00b4403bbbf28209480fbcb05b46138e4d5a5a3b.idx
+│   │       ├── pack-00b4403bbbf28209480fbcb05b46138e4d5a5a3b.pack
+│   │       ├── pack-00b4403bbbf28209480fbcb05b46138e4d5a5a3b.rev
+│   │       ├── pack-87286a734567ff6d7ffbdd92a3e3a8b28773c9d6.idx
+│   │       ├── pack-87286a734567ff6d7ffbdd92a3e3a8b28773c9d6.pack
+│   │       └── pack-87286a734567ff6d7ffbdd92a3e3a8b28773c9d6.rev
+│   ├── refs/
+│   │   ├── agents/
+│   │   │   └── d54c112f-6cf9-4c81-ba45-071778d849a9/
+│   │   │       └── checkpoints/
+│   │   │           └── turn/
+│   │   │               ├── 0
+│   │   │               └── 1
+│   │   ├── heads/
+│   │   │   ├── agents/
+│   │   │   │   └── hi
+│   │   │   └── main
+│   │   ├── remotes/
+│   │   │   └── origin/
+│   │   │       ├── HEAD
+│   │   │       └── main
+│   │   └── tags/
+│   ├── worktrees/
+│   │   └── hi/
+│   │       ├── logs/
+│   │       │   └── HEAD
+│   │       ├── refs/
+│   │       ├── commondir
+│   │       ├── FETCH_HEAD
+│   │       ├── gitdir
+│   │       ├── HEAD
+│   │       ├── index
+│   │       └── ORIG_HEAD
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── index
+│   └── ORIG_HEAD
+├── .vscode/
+│   └── settings.json
+├── CoffeeShop-Carousel-Guide/
+│   ├── CoffeeShop-Carousel-Guide.html
+│   └── CoffeeShop-Carousel-Guide.pdf
+├── Favorites-Folder/
+│   ├── Data/
+│   │   ├── AddFavorite.js
+│   │   └── RemoveFavorite.js
+│   ├── Ui/
+│   │   ├── Create-Favorite.js
+│   │   ├── empty data.json
+│   │   ├── Empty-State.js
+│   │   ├── Favorites-Elements.js
+│   │   ├── Order-From-Favorite.js
+│   │   ├── RemoveFav.js
+│   │   └── SearchBar-Appearence.js
+│   ├── Favorites.css
+│   ├── FavoritesMain.js
+│   └── Favorits.html
+├── Images/
+│   ├── Afogado.jpg
+│   ├── Americano.jpg
+│   ├── arrow-right.png
+│   ├── arrow.png
+│   ├── background-from-above.png
+│   ├── bell.png
+│   ├── BranName.png
+│   ├── Cappuccino.jpg
+│   ├── ChatGPT Image 4 sept. 2026, 21_17_57.png
+│   ├── choice.png
+│   ├── coffe-photo.png
+│   ├── Cold-brew.jpg
+│   ├── Cortado.jpg
+│   ├── cup-of-drink.png
+│   ├── delivery-bike.png
+│   ├── Espresso.jpg
+│   ├── Flat-white.jpg
+│   ├── form-photo.png
+│   ├── Galao.jpg
+│   ├── homme1.png
+│   ├── homme2.png
+│   ├── homme3.png
+│   ├── homme4.png
+│   ├── homme5.png
+│   ├── Ice-coffe.jpg
+│   ├── Ice-coffe.png
+│   ├── landing-background.jpg
+│   ├── Latte.jpg
+│   ├── listening.png
+│   ├── Lungo.jpg
+│   ├── Macchiato.jpg
+│   ├── Mocca.jpg
+│   ├── notification-transparent.png
+│   ├── person-holds-text-cloud2.jpg
+│   ├── process.png
+│   ├── purchase-order.png
+│   ├── Restretto.jpg
+│   ├── search.png
+│   ├── tag.png
+│   ├── testimonials-sticker.png
+│   ├── TopBackground.png
+│   ├── UserPic.png
+│   └── Viennese.jpg
+├── Market-Folder/
+│   ├── Ui/
+│   │   ├── Coffee-Menue-Carousel.js
+│   │   ├── Deselect-Liked.js
+│   │   ├── Header-Scrool-Style.js
+│   │   ├── Like-effect.js
+│   │   ├── README.md
+│   │   ├── Select-Liked.js
+│   │   └── URL-Handeling.js
+│   ├── CretaeInput.js
+│   ├── Input-Search-Display.js
+│   ├── Market-Elements.js
+│   └── Market.js
+├── Mistackes/
+│   ├── size-validation-explanation.html
+│   └── size-validation-explanation.pdf
+├── OrderBuilder/
+│   ├── Calculations/
+│   │   ├── PriceUpdate.js
+│   │   ├── README.md
+│   │   └── Total.js
+│   ├── Data/
+│   │   ├── Coffee.js
+│   │   └── OrderRecord.js
+│   ├── Landing/
+│   │   ├── Ui/
+│   │   │   ├── FormAppearence.js
+│   │   │   ├── Hide-Form.js
+│   │   │   └── index-Main.js
+│   │   └── indexJs-Elements.js
+│   ├── Selections/
+│   │   ├── ChosenMilk.js
+│   │   ├── ChosenOrder.js
+│   │   ├── ChosenTempreter.js
+│   │   ├── QuantityPrice-Init.js
+│   │   ├── Shots-Initialzer.js
+│   │   └── SizeChoosen.js
+│   ├── Ui/
+│   │   ├── MilkTextConten.js
+│   │   ├── Quantity.js
+│   │   ├── SlideToOrder.js
+│   │   ├── SugarInput.js
+│   │   ├── TempTextContent.js
+│   │   └── TickingSoundRepeat.js
+│   ├── Validation/
+│   │   ├── Checking-Temprater.js
+│   │   ├── CheckingMilk.js
+│   │   └── Cheking-Clicks.js
+│   ├── CalcElements.js
+│   ├── orderbuilder_structure_2026-08-26_15-59.txt
+│   └── README.md
+├── Orders-Page=Design/
+│   └── ChatGPT Image 26 août 2026, 12_59_07.png
+├── Sounds/
+│   ├── EndCoocking.mp3
+│   └── Ticking.wav
+├── Video background/
+│   ├── first video.mp4
+│   ├── Second video.mp4
+│   └── Third video.mp4
+├── .gitignore
+├── Afogado.html
+├── Americano.html
+├── Cappuccino.html
+├── coffe_site_structure_2026-09-08_19-06.txt
+├── coffe_site_structure_2026-09-09_16-23.txt
+├── Cold-Brew.html
+├── Cortado.html
+├── Espresso.html
+├── Flat-White.html
+├── Galao.html
+├── Iced-Coffee.html
+├── index.html
+├── java-buying.js
+├── LandingCss.css
+├── Latte.html
+├── Lungo.html
+├── Machiato.html
+├── market-page.html
+├── Mocca.html
+├── Ristretto.html
+├── Settings-Bar-Silde.js
+├── style.css
+└── Viennese.html
