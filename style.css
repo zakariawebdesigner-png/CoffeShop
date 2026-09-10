@@ -78,12 +78,12 @@ justify-content: space-between;
 .toggle-label{
    font-size: clamp(1.2rem,6vw,7rem);
   padding-left: 0.3rem;
+   padding-right: 0.3rem;
+  border-radius: 0.5rem;
 }
 
 .toggle-label:active{
 
-
-   border-radius: 0.5rem;
    background-color: #F5EBDD;
   
 }
@@ -160,6 +160,8 @@ justify-content: space-between;
  }
 
 
+
+
 .notification-toggle{
    display: flex;
    align-items: center;
@@ -169,28 +171,7 @@ justify-content: space-between;
 
 
 
-.notification.Scroll-Reverse{
-   background-image: url(Images/notification-transparent.png);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   width: clamp(1rem,6vw,15rem);
-   height: clamp(1rem,6vw,15rem);
 
-      
-      
-
-}
-
-
-.notification.Scroll{
-   background-image: url(Images/bell.png);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-  width: clamp(1rem,6vw,15rem);
-   height: clamp(1rem,6vw,15rem);
-}
 
 
 
@@ -1280,7 +1261,17 @@ padding-left: 0.3rem;
 border-radius: 0.5rem;
 width: fit-content;
 height: fit-content;
-background-color: #e2b679;
+
+
+background: #af8c5be6;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    /* Glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Subtle depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 transform: translateX(-100vw);
 z-index: 2;
 

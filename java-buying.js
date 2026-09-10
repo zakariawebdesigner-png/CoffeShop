@@ -20,6 +20,7 @@ import { MilkOrdered } from "./OrderBuilder/Selections/ChosenMilk.js";
 import { HandleClicks } from "./OrderBuilder/Validation/Cheking-Clicks.js";
 import { PriceCounter } from "./OrderBuilder/Calculations/PriceUpdate.js";
 import { Slide } from "./OrderBuilder/Ui/SlideToOrder.js";
+import { arrow } from "./Market-Folder/Market-Elements.js";
 
       
 
@@ -31,6 +32,17 @@ window.addEventListener("load",()=>{
       Quantity.value=1;
 
 });
+
+
+if(arrow){
+arrow.addEventListener("click",()=>{
+
+    window.history.back();
+
+});
+}
+
+
 
 
 

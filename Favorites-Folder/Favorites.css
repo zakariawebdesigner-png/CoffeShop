@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-   
+   overflow-x: hidden;
    margin: 0;
    padding-top: 0.2rem;
    gap: 1.5rem;
@@ -174,6 +174,19 @@ nav a{
     align-self: center;
     font-size: clamp(1rem,5vw,1.5rem);
     
+}
+
+.bars{
+   font-size: clamp(1.2rem,6vw,7rem);
+  padding-left: 0.3rem;
+   padding-right: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.bars:active{
+
+   background-color: #F5EBDD;
+  
 }
 
 

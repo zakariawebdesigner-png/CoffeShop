@@ -1,6 +1,6 @@
  
 
-const notification=document.getElementById("notification");
+
 
 
 import { HeaderScrollEffect } from "./Ui/Header-Scrool-Style.js";
@@ -21,11 +21,10 @@ import { DeseelectLiked } from "./Ui/Deselect-Liked.js";
 import { LikedCoffeesArray,GetLikedStorage } from "../Favorites-Folder/Data/Favorits-Data.js";
 
 
-
 window.addEventListener("load",()=>{
 
   //these lines controll the animation of the search bar and the header(Line 26 to 35) 
- notification.classList.add("Scroll-Reverse");
+
  
               const ResultTitle=document.createElement("div");
 
@@ -46,9 +45,10 @@ window.addEventListener("load",()=>{
               let CoffeeContainer=h.closest(".coffe-container") || h.closest(".Popular-container");
 
                  if(LikedCoffeesArray.includes(CoffeeContainer.dataset.name)){
-
+                        
                          RedHeart(h);
                          h.dataset.Clicked="true";
+
                  }
 
 
@@ -60,6 +60,9 @@ window.addEventListener("load",()=>{
 
 
 });
+
+
+
 
 
 
@@ -144,9 +147,10 @@ heart.addEventListener("click",(e)=>{
   
 
 e.stopPropagation();
-
-
 e.preventDefault();
+
+let ClickedHeart=e.currentTarget.closest(".MenueCoffee-Heart");
+if(!ClickedHeart)return;
 
 if(heart.dataset.Clicked=="false"){
 
