@@ -1310,7 +1310,7 @@ z-index: 2;
 }
 
 
-.question:has(.question-btn:hover) .popup-answer{
+.question:has(.question-btn:active) .popup-answer{
 
   animation: move-answer  1s ease forwards;
 }
@@ -1848,10 +1848,11 @@ transform: rotate(180deg);
 .photo-buying-container{
     position: relative;
   display: flex;
+
   justify-content: space-around;
   width: 97%;
-  height: clamp(4rem,40vh,7.3rem);
-
+  height: fit-content;
+  padding-bottom: 0.5rem;
 }
 
 
@@ -1862,8 +1863,9 @@ transform: rotate(180deg);
 background-image: url(Images/Latte.jpg);
 background-size: cover;
 background-position: center;
-width: clamp(4rem,34vw,15rem) ;
-height: clamp(4rem,34vw,15rem);
+  align-self: center;
+width: clamp(4rem,30vw,9rem) ;
+height: clamp(4rem,30vw,9rem);
 
 border-radius: 0.8rem;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -1878,7 +1880,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   
   position: absolute;
     top: -15px;
-right: clamp(1rem,27vw,1.5rem);
+left:50%;
   font-size: clamp(0.3rem,5vw,1rem);
   
   color: #e2b679;
@@ -1888,11 +1890,12 @@ right: clamp(1rem,27vw,1.5rem);
 
 
 .sizes{
-position: relative;
+align-self: flex-end;
 display: flex;
 flex-direction: column;
-width: clamp(4rem,56vw,11rem);
-height: clamp(3.5rem,26.8vw,5.3rem);
+
+width: clamp(4rem,56vw,14rem);
+height: clamp(3rem,20vw,7rem);
 background-color: #dcc3a1;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 top: clamp(0.3rem,7vw,1.5rem);
@@ -1902,9 +1905,9 @@ border-radius:  0.5rem;
 
 
 .size-text{
-position: absolute;
-top: -13px;
 
+margin-bottom: 0;
+line-height: 0;
   
   color: #633f0c;
   font-weight: 500;
@@ -1916,11 +1919,10 @@ top: -13px;
   display:flex;
   justify-content: space-evenly;
   width: 100%;
-  height: clamp(1rem,20vw,2rem);
-  top: 35px;
+  height: clamp(1rem,10vw,2rem);
+  top: 15%;
   font-weight: 600;
   font-family: 'Playfair Display';
- 
   
 }
 
@@ -1931,7 +1933,7 @@ top: -13px;
   outline: none;
   background-color: #dcc3a1;
 margin-top: 0;
-    font-size: larger;
+    font-size: clamp(0.5rem,5vw,2rem);
   border-radius: 0.2rem;
   
 }
@@ -1949,11 +1951,12 @@ display: flex;
 flex-direction: column;
 align-self: center;
 width:93%;
+max-width: 30rem;
 height: clamp(3rem,40vw,65rem);
 border-radius: 0.7rem;
 background-color: #e4b97d;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-
+gap: 10%;
 }
 
 
@@ -1967,11 +1970,30 @@ height: clamp(0.3rem,30vw,2rem);
 
 }
 
+@media (min-width:600px) {
+  
+.shugar-container{
+padding-top: 1rem;
+}
+
+
+
+.Extra{
+
+ justify-content: space-around;
+
+
+}
+
+
+
+}
+
 
 
 
 .shugar{
-width: clamp(0.5rem,20vw,1rem);
+width: clamp(0.8rem,25vw,1.1rem);
 height: 1.5rem;
   margin-left: 1px;
   margin-right: 1px;
@@ -2045,7 +2067,7 @@ ul{
    
 font-weight: 600;
   top: 58px;
- left: 93px;
+ left: 88px;
      font-size: clamp(0.1rem,10vw,1rem);
     z-index: 11;
 }
@@ -2132,11 +2154,24 @@ width: 40vw;
   align-items: center;
   width: 100%;
   gap: 10px;
+
 }
+
+
+
+.how-many p{
+  
+  font-size: clamp(0.6rem,5vw,2rem);
+  
+}
+
+
+
+
 
 .how-many button{
 
-  font-size: larger;
+    font-size: clamp(0.6rem,5vw,2rem);
 background-color: wheat;
 border: none;
 border-radius: 0.3rem;
